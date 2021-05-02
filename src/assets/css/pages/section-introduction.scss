@@ -1,0 +1,52 @@
+.section-introduction {
+  padding: 50px 0;
+  .section-wrapper {
+    .section-item {
+      position: relative;
+      flex: 0 0 50%;
+      max-width: 50%;
+      .introduction-title {
+        font-size: 55px;
+        font-weight: 500;
+        line-height: 1.2;
+        color: $text-black;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        margin-top: 0;
+      }
+      .introduction-des {
+        font-size: 16px;
+        color: $gray;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+      .item-bg {
+        img {
+          width: 100%;
+        }
+      }
+      .item-blogger {
+        position: absolute !important;
+        bottom: 20px;
+        right: 40px;
+        z-index: 3;
+        padding: 20px 10px;
+        pointer-events: none;
+        @include styleMaskBg($white, 6px, -3px);
+        .item-des {
+          color: $gray;
+          font-size: 18px;
+          text-align: center;
+          margin: 0 0 10px 0;
+          font-style: italic;
+        }
+        .item-name {
+          font-size: 28px;
+          text-transform: uppercase;
+          text-align: center;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

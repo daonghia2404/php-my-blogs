@@ -1,0 +1,282 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+}
+
+.section-bg-page {
+	background: $white url('../images/bg-page.jpeg');
+	background-size: cover;
+	background-position: center;
+}
+
+::selection {
+  color: $white;
+  background: $primary;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+p {
+	line-height: 1.5;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+}
+.flex-wrap {
+	flex-wrap: wrap;
+}
+.flex-reverse {
+	flex-direction: row-reverse;
+}
+.flex-col {
+	flex-direction: column;
+}
+.flex-col-reverse {
+	flex-direction: column-reverse;
+}
+.items-start {
+	align-items: flex-start;
+}
+.items-center {
+	align-items: center;
+}
+.items-end {
+	align-items: flex-end;
+}
+.justify-start {
+	justify-content: flex-start;
+}
+.justify-center {
+	justify-content: center;
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.justify-between {
+	justify-content: space-between;
+}
+.justify-around {
+	justify-content: space-around;
+}
+
+section.section {
+  padding: 40px 0;
+  .section-header {
+    margin-bottom: 40px;
+  }
+  .section-des {
+    color: $gray;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+		margin-bottom: 5px;
+  }
+	.section-subdes {
+		font-size: 16px;
+		color: $gray;
+		text-align: center;
+		font-family: 'Mulish', sans-serif;
+		max-width: 590px;
+		margin: 20px auto 0;
+	}
+  .section-title {
+    margin-top: 0;
+    font-size: 50px;
+    text-align: center;
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+    .hightlight-text {
+      @include styleMaskBg($primary-transparent, 4px, -2px);
+			&.light {
+				@include styleMaskBg($white, 4px, -2px);
+			}
+			display: block;
+			margin-left: 30px;
+			padding: 0 5px;
+			color: $primary;
+    }
+  }
+}
+
+.custom-style-form {
+	width: 100%;
+	.form-group {
+		margin-bottom: 15px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+
+		&.single {
+			.form-item {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+
+		&.two {
+			.form-item {
+				flex: 0 0 calc(100% / 2 - 15px);
+				max-width: calc(100% / 2 - 15px);
+			}
+		}
+
+		&.three {
+			.form-item {
+				flex: 0 0 calc(100% / 3 - 15px);
+				max-width: calc(100% / 3 - 15px);
+			}
+		}
+		.form-item {
+			textarea,
+			input {
+				outline: none;
+				border: 1px solid transparent;
+				height: 54px;
+				background: $white;
+				padding: 0 15px;
+				font-family: 'Crimson Text', serif;
+				font-size: 16px;
+				width: 100%;
+				&::placeholder {
+					font-style: italic;
+					color: $gray;
+				}
+				&.border-gray {
+					border-color: $border;
+				}
+			}
+			textarea {
+				min-height: 190px;
+				padding: 15px;
+			}
+			button {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.custom-style-content {
+	h1,h2,h3,h4,h5,h6 {
+		color: $text-black;
+		margin: 0 0 25px 0;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	h1 {
+		font-size: 45px;
+	}
+	h2 {
+		font-size: 35px;
+	}
+	h3 {
+		font-size: 30px;
+	}
+	h4 {
+		font-size: 25px;
+	}
+	h5 {
+		font-size: 20px;
+	}
+	p, li {
+		font-size: 16px;
+		line-height: 1.5;
+		color: $gray;
+		margin-bottom: 25px;
+		font-family: 'Mulish', sans-serif;
+		text-align: justify;
+	}
+	ul {
+		list-style: decimal;
+		margin-bottom: 25px;
+		padding-left: 15px;
+		li {
+			margin-bottom: 5px;
+			font-weight: 400;
+		}
+	}
+
+	a, strong {
+		color: $primary;
+		font-family: 'Mulish', sans-serif;
+	}
+	a {
+		text-decoration: underline;
+	}
+
+	img {
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto 25px;
+		display: block;
+	}
+
+	blockquote {
+		padding: 120px 50px 80px;
+		background: url('../images/bg-quote.svg');
+		background-size: cover;
+		background-position: center;
+		position: relative;
+		text-align: center;
+		margin-bottom: 25px;
+		&::before {
+			position: absolute;
+			width: 60px;
+			height: 60px;
+			background: url('../icons/icon-quote-white.svg');
+			background-size: cover;
+			background-position: center;
+			content: '';
+			top: 50px;
+			left: 65px;
+		}
+		.blockquote-author {
+			font-size: 20px;
+      color: $primary;
+      font-style: italic;
+      padding: 5px 15px;
+			font-family: 'Crimson Text', serif;
+      @include styleMaskBg($white, 2px, -1px);
+		}
+	}
+
+	.column-content {
+		display: flex;
+		justify-content: space-between;
+		.content-item {
+			margin-bottom: 25px;
+			img {
+				width: 100%;
+				max-width: 100%;
+				margin-bottom: 0;
+			}
+		}
+		&.two {
+			.content-item {
+				flex: 0 0 calc(100% / 2 - 12.5px);
+				max-width: calc(100% / 2 - 12.5px);
+			}
+		}
+	}
+}

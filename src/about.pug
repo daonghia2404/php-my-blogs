@@ -1,0 +1,47 @@
+extends includes/layout/layout.pug
+
+block pages
+  section.section-index
+    include includes/components/banner.pug
+    +Banner({ title: 'About Me', image: './assets/images/bg-banner-about.jpeg' })
+    .section-bg-page(style="margin-top: 350px;")
+      include includes/pages/section-header.pug
+      .section-about-page 
+        .container
+          .about-me.flex.flex-wrap.items-center
+            .about-item.custom-style-content
+              p(style="font-size: 16px; font-style: italic;").crimson-text-font Lorem ipsum dolor sit amet
+              h2 HOW I STARTED TRAVELING
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.
+              include ./includes/components/button.pug
+              +Button({ link: '#', title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+            .about-item.target-tilt
+              img(src="./assets/images/image-about-1.png", alt="")
+
+        .container
+          .about-me.flex.flex-wrap.items-center
+            .about-item.target-tilt
+              img(src="./assets/images/image-about-2.png", alt="")
+            .about-item.custom-style-content
+              p(style="font-size: 16px; font-style: italic;").crimson-text-font Lorem ipsum dolor sit amet
+              h2 FINDING YOUR WAY THROUGH
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.
+              include ./includes/components/button.pug
+              +Button({ link: '#', title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+
+          
+
+        section.section.section-our-story(style="padding-bottom: 0;")
+          .section-header(style="margin-bottom: 0;")
+            p.section-des.crimson-text-font Lorem ipsum dolor
+            h2.section-title 
+              |GET TO KNOW OUR
+              span.hightlight-text 
+                include ./includes/components/mask-bg.pug
+                |STORY
+            p.section-subdes Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu smod tempor incididu nt ut labore et dolore magna aliqua mas.
+
+        include includes/pages/section-category-count.pug
+
+
+      include includes/pages/section-contact.pug

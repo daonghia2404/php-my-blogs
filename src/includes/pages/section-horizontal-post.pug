@@ -1,0 +1,39 @@
+-
+  const dataHorizontalPosts = [
+    {
+      image: './assets/images/image-blog-7.jpeg',
+      date: 'October 8, 2019',
+      des: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam',
+      tag: 'Travel tips',
+      author: 'Alisa Michaels',
+      title: 'MOVING TROUGH: THE EVERYDAY URBAN JUNGLE OF YOUR CITY',
+      link: '#',
+      isHorizontal: true,
+    },
+    {
+      image: './assets/images/image-blog-8.jpeg',
+      date: 'October 8, 2019',
+      des: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam ',
+      tag: 'Travel tips',
+      author: 'Alisa Michaels',
+      title: 'TOP HIKING TRAILS IN THE PERUVIAN AMAZON RAIN FOREST',
+      link: '#',
+      isHorizontal: true,
+    },
+  ]
+
+section.section.section-horizontal-post 
+  .container 
+    .section-wrapper 
+      .section-header
+        p.section-des.crimson-text-font Lorem ipsum dolor
+        h2.section-title 
+          |TRAVEL ESSENTIALS
+          span.hightlight-text 
+            include ../components/mask-bg.pug
+            |TIPS
+      
+      .section-main
+        each item in dataHorizontalPosts
+          include ../components/post.pug
+          +Post(item)

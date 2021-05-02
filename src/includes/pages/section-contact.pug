@@ -1,0 +1,23 @@
+section.section.section-contact 
+  .section-wrapper.flex.flex-wrap.items-center
+    .section-item
+      img(src="./assets/images/image-contact.png", alt="").contact-image
+    .section-item
+      p.section-des.crimson-text-font Lorem ipsum dolor
+      h2.section-title 
+        |FINDING THE PERFECT TRAILS TO HIKE IS EASY WITH
+        span.hightlight-text.light
+          include ../components/mask-bg.pug
+          |NEWSLETTER
+      
+      p.contact-des.mulish-font Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu tempor incididu nt ut labore et dolore minim veniam, quis nostrud nus.
+
+      form(action="#").custom-style-form.contact-form
+        .form-group.three
+          .form-item
+            input(type="text" placeholder="Name")
+          .form-item
+            input(type="text" placeholder="E-mail")
+          .form-item
+            include ../components/button.pug
+            +Button({ link: '#', title: 'Subscribe', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })

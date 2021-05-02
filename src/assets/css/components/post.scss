@@ -1,0 +1,103 @@
+.post-component {
+  padding: 15px;
+  &.horizontal {
+    .post-image-wrapper,
+    .post-content-wrapper {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    &:nth-of-type(odd) {
+      .post-content-wrapper {
+        padding: 30px;
+      }
+    }
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+      .post-content-wrapper {
+        padding: 30px;
+      }
+    }
+    .post-content-wrapper {
+      .post-date,
+      .post-author {
+        font-family: 'Crimson Text', serif;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  &.vertical {
+    .post-content-wrapper {
+      .post-date,
+      .post-author {
+        font-family: 'Crimson Text', serif;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+  &:hover {
+    .post-content-wrapper {
+      .post-title {
+        @include hoverStyleUnderline();
+      }
+    }
+  }
+  .post-image-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+    .post-image {
+      img {
+        width: 100%;
+      }
+    }
+    .post-tag {
+      position: absolute !important;
+      top: 20px;
+      left: 0;
+      font-size: 18px;
+      color: $gray;
+      font-style: italic;
+      padding: 5px 15px;
+      @include styleMaskBg($brown-light, 2px, -1px);
+      font-weight: 400;
+      white-space: nowrap;
+      img {
+        flex: 0 0 20px;
+        max-width: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .post-content-wrapper {
+    .post-date,
+    .post-author {
+      font-size: 18px;
+      color: $gray;
+      font-weight: 400;
+      font-style: italic;
+      white-space: nowrap;
+      margin-bottom: 10px;
+      margin-right: 30px;
+
+      img {
+        flex: 0 0 15px;
+        max-width: 15px;
+        margin-right: 10px;
+      }
+    }
+    .post-des {
+      line-height: 1.5;
+      color: $gray;
+      font-size: 14px;
+      margin: 15px 0;
+    }
+    .post-title {
+      font-weight: 500;
+      color: $text-black;
+      font-size: 28px;
+      @include styleUnderline();
+      line-height: 1.3;
+    }
+  }
+}

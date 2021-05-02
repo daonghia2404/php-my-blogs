@@ -1,0 +1,129 @@
+extends includes/layout/layout.pug
+
+block pages
+  -
+    const dataTagsBlog = [
+      { title: 'Adventure', link: '#' },
+      { title: 'Destinations', link: '#' },
+      { title: 'Explore', link: '#' },
+      { title: 'Guides', link: '#' },
+      { title: 'Nature', link: '#' },
+      { title: 'Travel', link: '#' },
+      { title: 'Tips', link: '#' }
+    ]
+  section.section-index
+    include includes/components/banner.pug
+    +Banner({ title: 'Blog', image: './assets/images/bg-banner-blog-detail.jpeg' })
+    .section-bg-page(style="margin-top: 350px;")
+      include includes/pages/section-header.pug
+
+      .section-blog-detail-page 
+        .container
+          .blog-detail 
+            .blog-header
+              .blog-poster.target-tilt
+                img(src="./assets/images/image-blog-poster.jpeg", alt="")
+              a(href=`#`).post-tag.flex.items-center.justify-center.crimson-text-font
+                include ./includes/components/mask-bg.pug
+                img(src="./assets/icons/icon-tag-gray.svg", alt="")
+                |Trips
+            
+            .blog-body.section-wrapper.flex.flex-wrap
+              .section-item.main.custom-style-content
+                .post-date.flex.items-center 
+                  img(src="./assets/icons/icon-calendar-gray.svg", alt="")
+                  |October 11, 2019
+
+                h1 THE LAUGAVEGUR TRAIL
+
+                blockquote
+                  h3 SOMETIMES THE HIKE IS BETTER THAN THE TOP
+                  .flex.justify-center
+                    .blockquote-author
+                      include includes/components/mask-bg.pug
+                      |Annie Brigss
+
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur. Excep teur sint occaecat non proident, sunt in culpa qui officia deserunt mollit anim idlaborum. Sed ut persp iciatis unde omnis iste natus error sit. voluptatem accusantium doloremque laudantium, totam rem aperiam. Architecto beatae vitae dicta sunt explicabo.Eu fugiat nulla pariatur.
+                h3 STOCKHOLM - WHAT TO EXPECT
+                p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur qui dolorem ipsum quia dolor sit.
+
+
+                blockquote
+                  h3 BUILD A LIFESTYLE AROUND YOUR BRAND, AND THE AUDIENCE WILL FOLLOW.
+                  .flex.justify-center
+                    .blockquote-author
+                      include includes/components/mask-bg.pug
+                      |Anonymous
+
+                p Nemo enim ipsam voluptatem quia voluptas #[a(href="#") sit aspernatur aut odit aut fugit], sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur qui dolorem ipsum quia dolor sit.
+
+                h4 TIPS FOR FIRST VISIT
+                ul 
+                  li #[strong Prepare Your food] – Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud.
+                  li #[strong Get city passes] – Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud.
+                  li #[strong Check where the locals eat] – Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis.
+
+                p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur qui dolorem ipsum quia dolor sit.
+
+                .column-content.two 
+                  .content-item
+                    img(src="./assets/images/image-post-blog-1.jpeg", alt="")
+                  .content-item
+                    img(src="./assets/images/image-post-blog-2.jpeg", alt="")
+
+                p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur qui dolorem ipsum quia dolor sit.
+                p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur qui dolorem ipsum quia dolor sit.
+
+                h2 DO’S AND DON’TS
+                img(src="./assets/images/image-post-blog-1.jpeg", alt="")
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam, uis nostrud exerc itation ullamco. Laboris nisi. ut aliquip ex ea commodo consequat. Duis aute irure dolr. inreprehen derit in voluptate velit esse cillum dolore. Eu fugiat nulla pariatur. Excep teur sint occaecat non proident, sunt in culpa qui officia deserunt mollit anim idlaborum. Sed ut persp iciatis unde omnis iste natus error sit. voluptatem accusantium doloremque laudantium, totam rem aperiam. Architecto beatae vitae dicta
+                p Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.Lorem ipsum dolor sit amet, consectetur adipisicing elit sed. Eiusmod tempor. incididu nt ut labore et dolore magna aliqua. Ut enim.
+
+                .blog-footer
+                  .blog-tags.flex.items-start
+                    img(src="./assets/icons/icon-tag-gray.svg", alt="")
+                    ul.blog-list-tags.flex.flex-wrap
+                      each item, index in dataTagsBlog
+                        li.list-item
+                          a(href=`${item.link}`)= item.title
+                          if (index !== dataTagsBlog.length - 1)
+                            span= `, `
+
+                  .blog-paginate.flex.justify-between 
+                    a(href="#").paginate-item.prev.flex.items-center
+                      img(src="./assets/images/image-blog-poster.jpeg", alt="").item-image
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path d="M5.9,270.2C5.9,270.2,5.9,270.2,5.9,270.2l104.5,104c7.8,7.8,20.5,7.8,28.3-0.1c7.8-7.8,7.8-20.5-0.1-28.3L68.4,276H492 c11,0,20-9,20-20c0-11-9-20-20-20H68.4l70.2-69.8c7.8-7.8,7.9-20.5,0.1-28.3c-7.8-7.8-20.5-7.9-28.3-0.1L5.9,241.8c0,0,0,0,0,0 C-2,249.7-1.9,262.4,5.9,270.2z"/> </svg>
+                      span.item-text Previous Post
+                    a(href="#").paginate-item.next.flex.items-center
+                      span.item-text Next Post
+                      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path d="M506.134,241.843c-0.006-0.006-0.011-0.013-0.018-0.019l-104.504-104c-7.829-7.791-20.492-7.762-28.285,0.068 c-7.792,7.829-7.762,20.492,0.067,28.284L443.558,236H20c-11.046,0-20,8.954-20,20c0,11.046,8.954,20,20,20h423.557 l-70.162,69.824c-7.829,7.792-7.859,20.455-0.067,28.284c7.793,7.831,20.457,7.858,28.285,0.068l104.504-104 c0.006-0.006,0.011-0.013,0.018-0.019C513.968,262.339,513.943,249.635,506.134,241.843z"/> </svg>
+                      img(src="./assets/images/image-blog-poster.jpeg", alt="").item-image
+
+                  .blog-comments 
+                    .comment-list 
+                      .comment-item.flex
+                        .item-avatar 
+                          img(src="./assets/images/image-avatar-border.png", alt="")
+                        .item-content 
+                          h4.comment-name ALISA MICHAELS
+                          p Lorem ipsum dolor sit amet mas, consect adipisicing elit sed. Eiusmod etrent te mporincidi du nt ut labore et dolore magna aliqua. Ut enim.
+                    form(action="#").comment-post.custom-style-form
+                      h2 Post a comment
+                      .form-group.single 
+                        .form-item 
+                          textarea(placeholder="Your comment").border-gray
+                      .form-group.two 
+                        .form-item 
+                          input(type="text" placeholder="Your Name").border-gray
+                        .form-item 
+                          input(type="text" placeholder="Your Email").border-gray
+                      .form-group 
+                        .form-item 
+                          include ./includes/components/button.pug
+                          +Button({ link: '#', title: 'Submit', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+
+
+              .section-item.category
+                include includes/components/category-sidebar.pug
+
+      include includes/pages/section-contact.pug

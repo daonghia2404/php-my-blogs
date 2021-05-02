@@ -1,0 +1,46 @@
+-
+  const dataCategoryCount = [
+    {
+      image: './assets/images/image-picnic-car.png',
+      title: 'Adventure',
+      count: 1,
+    },
+    {
+      image: './assets/images/image-picnic-map-marker.png',
+      title: 'Beaches',
+      count: 2,
+    },
+    {
+      image: './assets/images/image-picnic-fire.png',
+      title: 'Camping',
+      count: 3,
+    },
+    {
+      image: './assets/images/image-picnic-house.png',
+      title: 'Friendly',
+      count: 1,
+    },
+    {
+      image: './assets/images/image-picnic-bags.png',
+      title: 'Low Budget',
+      count: 2,
+    },
+    {
+      image: './assets/images/image-picnic-instruction-table.png',
+      title: 'Popuplar',
+      count: 3,
+    },
+  ]
+
+section.section.section-category-count 
+  .container 
+    .section-wrapper.flex.flex-wrap
+      each item in dataCategoryCount
+        .category-item
+          .item-image-wrapper.flex.justify-center
+            .item-image-mask 
+              include ../components/mask-bg.pug
+            img(src=`${item.image}`, alt="")
+          
+          p.item-des.mulish-font= `${item.count} destination`
+          h6.item-title= item.title

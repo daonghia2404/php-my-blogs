@@ -1,0 +1,7 @@
+mixin Banner(data)
+  section.banner
+    .banner-bg
+      img(src=`${data.image}`, alt="")
+    .container
+      .banner-wrapper.flex.items-center
+        h2.banner-title= data.title

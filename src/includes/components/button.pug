@@ -1,0 +1,15 @@
+mixin Button(data)
+  button.button-component.flex.items-center.justify-center(class=`${data.className} ${data.isReverse ? 'reverse' : ''} ${data.isHover ? 'hover-effect' : ''}`)
+    if data.isHover
+      .button-hover 
+        .button-overlay-dark 
+        .button-overlay-light.flex.items-center.justify-center 
+          img(src=`${data.icon}`, alt="").button-icon-hover
+
+    if (data.link)
+      a(href=`${data.link}`).button-title= data.title
+    else
+      span.button-title= data.title
+
+    if (data.icon)
+      img(src=`${data.icon}`, alt="").button-icon

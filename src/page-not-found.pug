@@ -1,0 +1,16 @@
+extends includes/layout/layout.pug
+
+block pages
+  section.section-index.section-not-found-page 
+    include includes/components/banner.pug
+    +Banner({ title: 'Page not Found', image: './assets/images/bg-banner-page-not-found.jpeg' })
+    .section-bg-page(style="margin-top: 350px;")
+      include includes/pages/section-header.pug
+      .section-not-found-page 
+        h1 WHOOPS… PAGE NOT FOUND
+        p Oops! The page you are looking for does not exist. It might have been moved or deleted.
+        .button-groups.flex.justify-center
+          include ./includes/components/button.pug
+          +Button({ link: 'index.html', title: 'Go back Home', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+
+      include includes/pages/section-contact.pug

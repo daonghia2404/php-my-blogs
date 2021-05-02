@@ -1,0 +1,105 @@
+.section-header {
+  position: relative;
+  z-index: 3;
+  background: $white;
+  .section-wrapper {
+    position: relative;
+    border-bottom: 1px solid $border-light;
+    .header-logo {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -70%);
+      width: 220px;
+      z-index: 5;
+      img {
+        width: 100%;
+      }
+    }
+    .header-main {
+      padding: 40px 0;
+      .header-item {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $text-black;
+        font-weight: 500;
+        color: $text-black;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        svg {
+          transition: 0.3s ease;
+        }
+
+        &:hover {
+          color: $primary;
+          svg {
+            fill: $primary;
+          }
+        }
+
+        svg {
+          flex: 0 0 25px;
+          max-width: 25px;
+        }
+        &.category {
+          svg {
+            margin-right: 15px;
+          }
+        }
+        &.search {
+          svg {
+            margin-left: 15px;
+          }
+        }
+        &.nav {
+          .header-list {
+            position: relative;
+            margin: 0 15px;
+            @include hoverMaskBg;
+            @include styleMaskBg($primary-transparent, 2px, -1px);
+
+            &:hover,
+            &.active {
+              .header-link {
+                color: $primary;
+              }
+            }
+          }
+          .header-link {
+            position: relative;
+            z-index: 3;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $text-black;
+            font-weight: 500;
+            transition: 0.3s ease;
+            padding: 5px 10px;
+            display: block;
+          }
+        }
+
+        .search-input {
+          outline: none;
+          border: none;
+          background: $white;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          font-size: 16px;
+          padding: 5px 0;
+          transform: translateY(-50%);
+          transform-origin: right;
+          width: 0;
+          transition: 0.3s ease;
+          overflow: hidden;
+          &.active {
+            padding: 5px 10px;
+            border-left: 1px solid $text-black;
+            width: 150px;
+          }
+        }
+      }
+    }
+  }
+}

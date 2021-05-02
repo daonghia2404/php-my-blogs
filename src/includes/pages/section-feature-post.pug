@@ -1,0 +1,61 @@
+-
+  const dataPosts = [
+    {
+      image: './assets/images/image-blog-1.jpeg',
+      tag: 'Vacation',
+      author: 'Alisa Michaels',
+      title: 'ON THE SHORES OF A VANISHING ISLAND IN INDIA',
+      link: '#',
+    },
+    {
+      image: './assets/images/image-blog-3.jpeg',
+      tag: 'Vacation',
+      author: 'Alisa Michaels',
+      title: '22 THINGS TO KNOW BEFORE YOU GO TO KAZAKHSTAN',
+      link: '#',
+    },
+    {
+      image: './assets/images/image-blog-2.jpeg',
+      tag: 'Vacation',
+      author: 'Alisa Michaels',
+      title: 'THE REAL NETHERLANDS: Q&A WITH CLEO WACHTER',
+      link: '#',
+    },
+    {
+      image: './assets/images/image-blog-4.jpeg',
+      tag: 'Vacation',
+      author: 'Alisa Michaels',
+      title: '21 THING TO KNOW BEFORE YOUR TRIP TO KOLKOTA',
+      link: '#',
+    },
+    {
+      image: './assets/images/image-blog-5.jpeg',
+      tag: 'Vacation',
+      author: 'Alisa Michaels',
+      title: 'PINGVELLIR, ICELAND’S OLDEST NATIONAL PARK',
+      link: '#',
+    },
+    {
+      image: './assets/images/image-blog-6.jpeg',
+      tag: 'Vacation',
+      author: 'Alisa Michaels',
+      title: 'MUNICH – CITY THAT DESERVE MORE THAN A STOPOVER',
+      link: '#',
+    },
+  ]
+
+section.section.section-feature-post 
+  .container 
+    .section-wrapper 
+      .section-header
+        p.section-des.crimson-text-font Lorem ipsum dolor
+        h2.section-title 
+          |FEATURED BLOG
+          span.hightlight-text 
+            include ../components/mask-bg.pug
+            |POSTS
+      
+      .section-main
+        each item in dataPosts
+          include ../components/post.pug
+          +Post(item)

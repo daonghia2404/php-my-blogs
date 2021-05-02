@@ -1,0 +1,18 @@
+.section-category-page {
+  padding: 60px 0;
+  .section-wrapper {
+    .section-item {
+      &.category {
+        flex: 0 0 350px;
+        max-width: 350px;
+      }
+      &.main {
+        flex: 1;
+        margin-left: 50px;
+        .post-component {
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+}

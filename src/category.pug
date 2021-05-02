@@ -1,0 +1,47 @@
+extends includes/layout/layout.pug
+
+block pages
+  -
+    const dataVerticalPosts = [
+      {
+        image: './assets/images/image-blog-7.jpeg',
+        date: 'October 8, 2019',
+        des: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam',
+        tag: 'Travel tips',
+        author: 'Alisa Michaels',
+        title: 'MOVING TROUGH: THE EVERYDAY URBAN JUNGLE OF YOUR CITY',
+        link: '#',
+        isVertical: true,
+      },
+      {
+        image: './assets/images/image-blog-8.jpeg',
+        date: 'October 8, 2019',
+        des: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim. ad minim veniam ',
+        tag: 'Travel tips',
+        author: 'Alisa Michaels',
+        title: 'TOP HIKING TRAILS IN THE PERUVIAN AMAZON RAIN FOREST',
+        link: '#',
+        isVertical: true,
+      },
+    ]
+
+  section.section-index
+    include includes/components/banner.pug
+    +Banner({ title: 'Category', image: './assets/images/bg-banner-category.jpeg' })
+    .section-bg-page(style="margin-top: 350px;")
+      include includes/pages/section-header.pug
+
+      .section-category-page 
+        .container
+          .section-wrapper.flex.flex-wrap
+            .section-item.category
+              include includes/components/category-sidebar.pug
+
+            .section-item.main
+              each item in dataVerticalPosts
+                include ./includes/components/post.pug
+                +Post(item)
+
+              include includes/components/pagination.pug
+
+      include includes/pages/section-contact.pug

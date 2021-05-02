@@ -1,0 +1,30 @@
+mixin Post(data)
+  .post-component(class=`${data.isHorizontal ? 'horizontal flex flex-wrap items-center' : ''} ${data.isVertical ? 'vertical' : ''}`)
+    .post-image-wrapper 
+      .post-image.target-tilt
+        a(href=`${data.link}`)
+          img(src=`${data.image}`, alt="")
+
+      a(href=`${data.link}`).post-tag.flex.items-center.justify-center.crimson-text-font
+        include mask-bg.pug
+        img(src="./assets/icons/icon-tag-gray.svg", alt="")
+        = data.tag
+
+    .post-content-wrapper 
+      .content-header.flex.flex-wrap 
+        if data.date
+          h6.post-date.flex.items-center 
+            img(src="./assets/icons/icon-calendar-gray.svg", alt="")
+            = data.date
+
+        h6.post-author.flex.items-center 
+          img(src="./assets/icons/icon-edit-gray.svg", alt="")
+          = data.author
+
+      a(href=`${data.link}`).post-title= data.title
+
+      p.post-des.mulish-font= data.des
+
+      if data.isHorizontal || data.isVertical
+        include ../components/button.pug
+        +Button({ link: '#', title: 'Read More', icon: './assets/icons/icon-arrow-45.svg', className: 'default', isHover: true })

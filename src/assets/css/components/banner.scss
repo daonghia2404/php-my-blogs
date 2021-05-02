@@ -1,0 +1,31 @@
+section.banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 350px;
+
+  .banner-bg {
+    @include fullAbsolute;
+    @include centerImage;
+    z-index: 1;
+  }
+
+  .banner-overlay {
+    @include fullAbsolute;
+    background: rgba(0,0,0,0.2);
+    z-index: 2;
+  }
+  
+  .banner-wrapper {
+    position: relative;
+    height: 350px;
+    z-index: 3;
+    .banner-title {
+      font-size: 50px;
+      color: $white;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+}

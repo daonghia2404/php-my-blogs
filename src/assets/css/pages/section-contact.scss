@@ -1,0 +1,39 @@
+section.section.section-contact {
+  background: url('../images/bg-contact.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+  .section-title,
+  .section-des {
+    text-align: left;
+  }
+  .section-title {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 42px;
+    .hightlight-text {
+      display: inline-block;
+    }
+  }
+  .section-item {
+    &:nth-of-type(1) {
+      flex: 0 0 45%;
+      max-width: 45%;
+      padding: 30px 0;
+    }
+    &:nth-of-type(2) {
+      flex: 0 0 55%;
+      max-width: 55%;
+      padding: 30px 50px;
+    }
+    .contact-image {
+      width: 100%;
+    }
+    .contact-des {
+      font-size: 16px;
+      color: $gray;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+  }
+}

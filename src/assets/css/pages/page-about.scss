@@ -1,0 +1,23 @@
+.section-about-page {
+  padding: 30px 0;
+  .about-me {
+    padding: 30px 0;
+    .about-item {
+      flex: 0 0 50%;
+      max-width: 50%;
+      margin-bottom: 15px;
+      &.custom-style-content {
+        padding: 0 30px;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        margin-bottom: 10px;
+      }
+      .button-component {
+        margin-top: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@mixin centerImage() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@mixin ellipsis($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin fullAbsolute() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin styleMaskBg($color, $x, $y) {
+  position: relative;
+  background: $color;
+  .mask-left,
+  .mask-right {
+    position: absolute;
+    fill: $color;
+    transition: 0.3s ease;
+    height: calc(100% + #{$x});
+    top: $y;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .mask-left {
+    left: $x + 2px;
+    transform: translateX(-100%);
+  }
+  .mask-right {
+    right: $x + 2px;
+    transform: translateX(100%);
+  }
+}
+
+@mixin hoverMaskBg() {
+  &.active,
+  &:hover {
+    &::before {
+      transform: scaleX(0);
+    }
+  }
+
+  &::before {
+    @include fullAbsolute;
+    content: '';
+    background: $white;
+    z-index: 2;
+    left: -15px;
+    width: calc(100% + 30px);
+    pointer-events: none;
+    transition: 0.3s ease;
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+
+@mixin styleUnderline() {
+  transition: 0.6s cubic-bezier(.215,.61,.355,1);
+  background: linear-gradient(transparent calc(100% - 2px), $primary 2px);
+  background-size: 0% 96%;
+  background-repeat: no-repeat;
+}
+@mixin hoverStyleUnderline() {
+  color: $primary;
+  background-size: 100% 96%;
+}
