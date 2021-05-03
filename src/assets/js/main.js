@@ -8,6 +8,8 @@ window.onload = () => {
 const header = {
   init: function() {
     this.expandSearch()
+    this.expandMenuMobile()
+    this.expandCategoryMobile()
   },
   expandSearch: function() {
     const searchBtnIcon = document.querySelector('.section-header .header-item.search svg')
@@ -19,6 +21,49 @@ const header = {
         if (searchMain.className.includes('active')) {
           searchMain.focus()
         }
+      })
+    }
+  },
+  expandMenuMobile: function() {
+    const menuBtn = document.querySelector('.section-header .header-item.btn-menu-mobile')
+    const menuMain = document.querySelector('.menu-mobile-wrapper')
+    const body = document.querySelector('body')
+    if (menuBtn && menuMain) {
+      const menuOverlay = menuMain.querySelector('.menu-overlay')
+      const menuClose = menuMain.querySelector('.menu-close')
+
+      menuBtn.addEventListener('click', () => {
+        menuMain.classList.add('active')
+        body.style.overflow = 'hidden'
+      })
+
+      menuOverlay.addEventListener('click', () => {
+        menuMain.classList.remove('active')
+        body.style.overflow = 'auto'
+      })
+
+      menuClose.addEventListener('click', () => {
+        menuMain.classList.remove('active')
+        body.style.overflow = 'auto'
+      })
+    }
+  },
+  expandCategoryMobile: function() {
+    const categoryBtn = document.querySelector('.category-filter-mobile')
+    const categoryMain = document.querySelector('.category-sidebar')
+    const body = document.querySelector('body')
+
+    if (categoryBtn && categoryMain) {
+      const categoryClose = categoryMain.querySelector('.category-close')
+
+      categoryBtn.addEventListener('click', () => {
+        categoryMain.classList.add('active')
+        body.style.overflow = 'hidden'
+      })
+
+      categoryClose.addEventListener('click', () => {
+        categoryMain.classList.remove('active')
+        body.style.overflow = 'auto'
       })
     }
   }

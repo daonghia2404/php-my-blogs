@@ -7,6 +7,10 @@
   border: 1px solid transparent;
   overflow: hidden;
 
+  @media (max-width: 991px) {
+    padding: 10px 30px;
+  }
+
   .button-title {
     line-height: 1.5;
     font-size: 14px;

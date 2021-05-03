@@ -1,0 +1,16 @@
+.menu-mobile-wrapper 
+  .menu-overlay 
+  .menu-main.flex.flex-col
+    img(src="./assets/icons/icon-close-green.svg", alt="").menu-close
+    a(href="#").menu-logo
+      img(src="./assets/images/logo.png", alt="")
+    ul.menu-nav
+      each item in dataNav
+        li.menu-list
+          include ../components/mask-bg.pug
+          a(href=`${item.link}`).menu-link= item.title
+    
+    .menu-footer
+      .footer-socials-list.flex.items-center 
+        span.crimson-text-font Socials
+        include social-links.pug

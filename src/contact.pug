@@ -1,0 +1,40 @@
+extends includes/layout/layout.pug
+
+block pages
+  section.section-index
+    include includes/components/banner.pug
+    +Banner({ title: 'Get in Touch', image: './assets/images/bg-banner-contact.jpeg' })
+    .section-bg-page(style="margin-top: 350px;")
+      include includes/pages/section-header.pug
+      .section-contact-page 
+        .container
+          .contact-wrapper.flex.flex-wrap.items-start
+            .contact-item.target-tilt
+              img(src="./assets/images/image-contact-content.png", alt="")
+            section.section.contact-item
+              .section-header
+                p.section-des.crimson-text-font Lorem ipsum dolor
+                h2.section-title 
+                  |FEEL FREE TO GET IN
+                  span.hightlight-text 
+                    include ./includes/components/mask-bg.pug
+                    |TOUCH
+                p.section-subdes Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu smod tempor incididu nt ut labore et dolore magna aliqua mas.
+              form(action="#").custom-style-form
+                .form-group.single 
+                  .form-item 
+                    textarea(placeholder="Your comment").border-gray
+                .form-group.two 
+                  .form-item 
+                    input(type="text" placeholder="Your Name").border-gray
+                  .form-item 
+                    input(type="text" placeholder="Your Email").border-gray
+                .form-group 
+                  .form-item 
+                    include ./includes/components/button.pug
+                    +Button({ link: '#', title: 'Submit', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+
+          .contact-map 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.86384838191!2d105.86802721476252!3d21.03813309283451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abd987d9094d%3A0xb5e0ebacca7bd0d7!2zMTI0IFBo4buRIELhu5MgxJDhu4EsIELhu5MgxJDhu4EsIExvbmcgQmnDqm4sIEjDoCBO4buZaSwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1620037737712!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              
+            

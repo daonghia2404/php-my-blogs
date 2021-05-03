@@ -1,11 +1,11 @@
 section.section-introduction 
   .container
-    .section-wrapper.flex.items-center
+    .section-wrapper.flex.items-center.flex-wrap
       .section-item 
         h1.introduction-title EXPLORING THE SUBURB SINCE 2019
         p.introduction-des.mulish-font Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore labore et dolore.
         include ../components/button.pug
-        +Button({ link: '#', title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+        +Button({ link: 'about.html', title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
       .section-item 
         .item-bg.target-tilt
           img(src="./assets/images/image-introduction.jpeg", alt="")

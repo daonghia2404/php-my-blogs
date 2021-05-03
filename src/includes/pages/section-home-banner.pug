@@ -4,9 +4,9 @@ section.section-home-banner
         .item-bg
           img(src="./assets/images/bg-banner-home.jpeg", alt="")
         .container 
-          .slider-wrapper.flex.items-center
+          .slider-wrapper.flex.items-center.flex-wrap
             .section-item
             .section-item 
               h1.item-title Camping guides for your next adventure 
               include ../components/button.pug
-              +Button({ title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+              +Button({ link: 'category.html', title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })

@@ -1,23 +1,37 @@
 .post-component {
   padding: 15px;
+
+  @media (max-width: 575px) {
+    padding: 15px 0;
+  }
+
   &.horizontal {
+
     .post-image-wrapper,
     .post-content-wrapper {
       flex: 0 0 50%;
       max-width: 50%;
-    }
-    &:nth-of-type(odd) {
-      .post-content-wrapper {
-        padding: 30px;
+
+      @media (max-width: 768px) {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
     }
+
+    .post-content-wrapper {
+      padding: 30px;
+
+      @media (max-width: 768px) {
+        padding: 10px 0
+      }
+    }
+
     &:nth-of-type(even) {
       flex-direction: row-reverse;
-      .post-content-wrapper {
-        padding: 30px;
-      }
     }
+
     .post-content-wrapper {
+
       .post-date,
       .post-author {
         font-family: 'Crimson Text', serif;
@@ -26,8 +40,10 @@
       }
     }
   }
+
   &.vertical {
     .post-content-wrapper {
+
       .post-date,
       .post-author {
         font-family: 'Crimson Text', serif;
@@ -36,6 +52,7 @@
       }
     }
   }
+
   &:hover {
     .post-content-wrapper {
       .post-title {
@@ -43,14 +60,17 @@
       }
     }
   }
+
   .post-image-wrapper {
     position: relative;
     margin-bottom: 15px;
+
     .post-image {
       img {
         width: 100%;
       }
     }
+
     .post-tag {
       position: absolute !important;
       top: 20px;
@@ -62,6 +82,7 @@
       @include styleMaskBg($brown-light, 2px, -1px);
       font-weight: 400;
       white-space: nowrap;
+
       img {
         flex: 0 0 20px;
         max-width: 20px;
@@ -69,7 +90,9 @@
       }
     }
   }
+
   .post-content-wrapper {
+
     .post-date,
     .post-author {
       font-size: 18px;
@@ -86,12 +109,14 @@
         margin-right: 10px;
       }
     }
+
     .post-des {
       line-height: 1.5;
       color: $gray;
       font-size: 14px;
       margin: 15px 0;
     }
+
     .post-title {
       font-weight: 500;
       color: $text-black;

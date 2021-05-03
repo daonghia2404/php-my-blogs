@@ -4,10 +4,20 @@ footer.footer {
   .footer-header {
     padding: 60px 0;
 
+    @media (max-width: 991px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .footer-logo {
-      max-width: 145px;
       flex: 0 0 calc(100% / 4 - 15px);
       max-width: calc(100% / 4 - 15px);
+
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 25px;
+      }
 
       img {
         max-width: 145px;
@@ -20,6 +30,10 @@ footer.footer {
       font-weight: lighter;
       font-style: italic;
       line-height: 1.4;
+
+      @media (max-width: 991px) {
+        text-align: center;
+      }
 
       .hightlight-text {
         @include styleMaskBg($primary-transparent, 2px, -1px);
@@ -35,6 +49,15 @@ footer.footer {
     .main-item {
       flex: 0 0 calc(100% / 4 - 15px);
       max-width: calc(100% / 4 - 15px);
+      @media (max-width: 991px) {
+        flex: 0 0 calc(100% / 2 - 15px);
+        max-width: calc(100% / 2 - 15px);
+        margin-bottom: 15px;
+      }
+      @media (max-width: 575px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
 
       .footer-title {
         font-weight: 500;
@@ -109,6 +132,22 @@ footer.footer {
     margin-top: 60px;
     padding: 15px 0;
     background: $primary-transparent;
+
+    .footer-wrapper {
+      @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        .footer-item {
+          &:not(:last-of-type) {
+            margin-bottom: 10px;
+          }
+          p {
+            text-align: center;
+          }
+        }
+
+      }
+    }
 
     p {
       font-size: 14px;

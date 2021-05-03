@@ -1,6 +1,11 @@
 .section-feature-post {
   .section-main {
     column-count: 3;
-    column-gap: 0;
+    @media (max-width: 991px) {
+      column-count: 2;
+    }
+    @media (max-width: 575px) {
+      column-count: 1;
+    }
   }
 }

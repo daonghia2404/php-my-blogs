@@ -4,31 +4,37 @@
       image: './assets/images/image-picnic-car.png',
       title: 'Adventure',
       count: 1,
+      link: 'category.html',
     },
     {
       image: './assets/images/image-picnic-map-marker.png',
       title: 'Beaches',
       count: 2,
+      link: 'category.html',
     },
     {
       image: './assets/images/image-picnic-fire.png',
       title: 'Camping',
       count: 3,
+      link: 'category.html',
     },
     {
       image: './assets/images/image-picnic-house.png',
       title: 'Friendly',
       count: 1,
+      link: 'category.html',
     },
     {
       image: './assets/images/image-picnic-bags.png',
       title: 'Low Budget',
       count: 2,
+      link: 'category.html',
     },
     {
       image: './assets/images/image-picnic-instruction-table.png',
       title: 'Popuplar',
       count: 3,
+      link: 'category.html',
     },
   ]
 
@@ -40,7 +46,8 @@ section.section.section-category-count
           .item-image-wrapper.flex.justify-center
             .item-image-mask 
               include ../components/mask-bg.pug
-            img(src=`${item.image}`, alt="")
+            a(href=`${item.link}`) 
+              img(src=`${item.image}`, alt="")
           
           p.item-des.mulish-font= `${item.count} destination`
-          h6.item-title= item.title
+          a(href=`${item.link}`).item-title= item.title

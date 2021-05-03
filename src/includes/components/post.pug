@@ -27,4 +27,4 @@ mixin Post(data)
 
       if data.isHorizontal || data.isVertical
         include ../components/button.pug
-        +Button({ link: '#', title: 'Read More', icon: './assets/icons/icon-arrow-45.svg', className: 'default', isHover: true })
+        +Button({ link: `${data.link}`, title: 'Read More', icon: './assets/icons/icon-arrow-45.svg', className: 'default', isHover: true })

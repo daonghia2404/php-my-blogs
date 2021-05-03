@@ -1,20 +1,18 @@
 -
   const dataNav = [
-    { title: 'Home', link: '#' },
-    { title: 'Pages', link: '#' },
-    { title: 'Destinations', link: '#' },
-    { title: 'Blog', link: '#' },
-    { title: 'Shop', link: '#' },
-    { title: 'Landing', link: '#' },
+    { title: 'Home', link: 'index.html' },
+    { title: 'About me', link: 'about.html' },
+    { title: 'Category', link: 'category.html' },
+    { title: 'Contact', link: 'contact.html' },
   ]
 
 section.section-header 
   .container 
     .section-wrapper 
-      .header-logo 
+      a(href="index.html").header-logo 
         img(src="./assets/images/logo.png", alt="")
       .header-main.flex.items-center.justify-between
-        a(href="#").header-item.flex.items-center.category
+        a(href="index.html").header-item.flex.items-center.category
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 477.874 477.874" style="enable-background:new 0 0 477.874 477.874;" xml:space="preserve"> <path d="M460.812,0c-2.651-0.001-5.266,0.615-7.637,1.8L323.844,66.483L177.6,1.476c-0.239-0.102-0.512-0.12-0.768-0.222 c-0.658-0.246-1.331-0.451-2.014-0.614c-0.679-0.183-1.369-0.326-2.065-0.427c-1.386-0.114-2.779-0.114-4.164,0 c-0.696,0.101-1.386,0.244-2.065,0.427c-0.683,0.163-1.356,0.368-2.014,0.614c-0.256,0.102-0.529,0.119-0.768,0.222l-153.6,68.267 C3.976,72.481,0.003,78.595,0.004,85.341v375.467c0.003,5.774,2.924,11.155,7.765,14.302c4.842,3.152,10.949,3.64,16.23,1.297 l146.671-65.195l146.671,65.195c0.256,0.102,0.529,0,0.785,0.154c4.132,1.848,8.875,1.742,12.919-0.29 c0.273-0.119,0.58,0,0.853-0.188l136.533-68.267c5.786-2.891,9.441-8.806,9.438-15.275V17.075 C477.875,7.649,470.237,0.004,460.812,0z M153.604,381.448L34.137,434.542V96.435L153.604,43.34V381.448z M307.204,434.542 l-119.467-53.094V43.34l119.467,53.094V434.542z M443.737,381.994l-102.4,51.2V95.888l102.4-51.2V381.994z"/> </svg>
           |Destinations
         
@@ -24,7 +22,16 @@ section.section-header
               include ../components/mask-bg.pug
               a(href=`${item.link}`).header-link= item.title
 
-        form(action="#").header-item.search.flex.items-center
+        form(action="#").header-item.search.flex.items-center.justify-end
           span.search-text Search
           input(type="text" placeholder="Search").search-input
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve"> <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667 S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6 c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"/> </svg>
+
+        .header-item.btn-menu-mobile.flex.items-center
+          span.menu-text Menu 
+          .menu-bar
+            span
+            span
+            span
+
+include ../components/menu-mobile.pug

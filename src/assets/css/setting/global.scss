@@ -77,6 +77,9 @@ p {
 .justify-around {
 	justify-content: space-around;
 }
+.flex-row-reverse {
+	flex-direction: row-reverse;
+}
 
 section.section {
   padding: 40px 0;
@@ -89,6 +92,9 @@ section.section {
     font-style: italic;
     text-align: center;
 		margin-bottom: 5px;
+		@media (max-width: 575px) {
+			font-size: 16px;
+		}
   }
 	.section-subdes {
 		font-size: 16px;
@@ -97,21 +103,25 @@ section.section {
 		font-family: 'Mulish', sans-serif;
 		max-width: 590px;
 		margin: 20px auto 0;
+		@media (max-width: 575px) {
+			font-size: 14px;
+		}
 	}
   .section-title {
     margin-top: 0;
     font-size: 50px;
     text-align: center;
 		font-weight: 500;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		display: block;
+		@media (max-width: 575px) {
+			font-size: 42px;
+		}
     .hightlight-text {
       @include styleMaskBg($primary-transparent, 4px, -2px);
 			&.light {
 				@include styleMaskBg($white, 4px, -2px);
 			}
-			display: block;
+			display: inline-block;
 			margin-left: 30px;
 			padding: 0 5px;
 			color: $primary;
@@ -122,10 +132,11 @@ section.section {
 .custom-style-form {
 	width: 100%;
 	.form-group {
-		margin-bottom: 15px;
+		margin-bottom: 7.5px;
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+		flex-wrap: wrap;
 
 		&.single {
 			.form-item {
@@ -138,6 +149,10 @@ section.section {
 			.form-item {
 				flex: 0 0 calc(100% / 2 - 15px);
 				max-width: calc(100% / 2 - 15px);
+				@media (max-width: 575px) {
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
 			}
 		}
 
@@ -145,9 +160,14 @@ section.section {
 			.form-item {
 				flex: 0 0 calc(100% / 3 - 15px);
 				max-width: calc(100% / 3 - 15px);
+				@media (max-width: 768px) {
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
 			}
 		}
 		.form-item {
+			margin-bottom: 7.5px;
 			textarea,
 			input {
 				outline: none;
@@ -158,6 +178,10 @@ section.section {
 				font-family: 'Crimson Text', serif;
 				font-size: 16px;
 				width: 100%;
+				@media (max-width: 991px) {
+					height: 43px;
+					font-size: 14px;
+				}
 				&::placeholder {
 					font-style: italic;
 					color: $gray;
@@ -264,6 +288,7 @@ section.section {
 	.column-content {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
 		.content-item {
 			margin-bottom: 25px;
 			img {
@@ -276,6 +301,10 @@ section.section {
 			.content-item {
 				flex: 0 0 calc(100% / 2 - 12.5px);
 				max-width: calc(100% / 2 - 12.5px);
+				@media (max-width: 575px) {
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
 			}
 		}
 	}

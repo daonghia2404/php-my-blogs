@@ -19,15 +19,16 @@ block pages
               img(src="./assets/images/image-about-1.png", alt="")
 
         .container
-          .about-me.flex.flex-wrap.items-center
-            .about-item.target-tilt
-              img(src="./assets/images/image-about-2.png", alt="")
+          .about-me.flex.flex-wrap.items-center.flex-row-reverse
             .about-item.custom-style-content
               p(style="font-size: 16px; font-style: italic;").crimson-text-font Lorem ipsum dolor sit amet
               h2 FINDING YOUR WAY THROUGH
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi. Ut aliquip ex ea commodo consequat.
               include ./includes/components/button.pug
               +Button({ link: '#', title: 'Read More', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary', isHover: true })
+            
+            .about-item.target-tilt
+              img(src="./assets/images/image-about-2.png", alt="")
 
           
 
