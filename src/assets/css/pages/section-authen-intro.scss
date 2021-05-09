@@ -1,0 +1,25 @@
+.section-authen-intro {
+  background: lighten($primary, 10%);
+  padding: 35px;
+  .section-item {
+    .item-avatar {
+      margin-right: 15px;
+      border: 2px solid $white;
+    }
+    .item-info {
+      h2 {
+        font-weight: 600;
+        color: $white;
+        font-size: 36px;
+        color: $white;
+        margin-bottom: 0;
+      }
+      p {
+        color: $border;
+        font-size: 14px;
+        font-family: 'Mulish', sans-serif;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

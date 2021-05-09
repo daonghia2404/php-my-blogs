@@ -1,0 +1,13 @@
+section.section-authen-intro 
+  .section-wrapper.flex.justify-between.items-center
+    .section-item.flex.items-center 
+      .item-avatar.avatar
+        img(src="./assets/images/avatar.png", alt="")
+      .item-info
+        h2 Welcome back, Brian! 
+        p You have 2 new messages and 15 new tasks
+
+    .section-item
+      include ../components/button.pug
+      +Button({ link: '#', title: 'Settings', icon: './assets/icons/icon-settings-green.svg', className: 'white radius', isHover: true })
+      

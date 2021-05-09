@@ -1,0 +1,41 @@
+.checkbox-wrapper {
+  cursor: pointer;
+
+  .checkbox-box-wrapper {
+    position: relative;
+    margin-right: 10px;
+
+    .checkbox-input {
+      @include fullAbsolute;
+      opacity: 0;
+      z-index: 2;
+    }
+    .checkbox-input:checked ~ .checkbox-box {
+      background: $primary;
+      svg {
+        opacity: 1;
+      }
+    }
+    .checkbox-box {
+      width: 25px;
+      height: 25px;
+      border-radius: 3px;
+      border: 1px solid $border;
+      display: flex;
+      svg {
+        width: 13px;
+        height: 13px;
+        fill: $white;
+        opacity: 0;
+        margin: auto;
+      }
+    }
+  }
+	.checkbox-label {
+		font-size: 14px;
+		font-weight: 400;
+    color: $text-black;
+    margin-bottom: 0;
+    font-family: 'Mulish', sans-serif;
+	}
+}

@@ -1,0 +1,41 @@
+extends includes/layout/layout-guest.pug
+block pages
+  section.section-guest-page 
+    .section-wrapper.flex 
+      .section-item.flex.items-center 
+        .item-wrapper
+          .item-logo 
+            img(src="./assets/images/logo-footer.png", alt="") 
+          h4.guest-title Sign In 
+          form(action="#").custom-style-form
+            .form-group.single
+              .form-item
+                .form-label Email address 
+                input(type="text" placeholder="Enter your email").border-gray.radius
+            .form-group.single
+              .form-item
+                .form-label Password
+                input(type="password" placeholder="Enter your email").border-gray.radius
+
+            .form-group.two.items-center
+              .form-item.flex.items-center 
+                include includes/components/checkbox.pug
+                +Checkbox({ label: 'Remember me', id: 'rememberMe' })
+              .form-item.text-right
+                a(href="#") Forgot password
+
+            .form-group.single(style="margin-top: 30px;")
+              .form-item 
+                include ./includes/components/button.pug
+                +Button({ link: '#', title: 'Sign in', icon: './assets/icons/icon-arrow-45-white.svg', className: 'primary radius', isHover: true })
+
+      .section-item.flex.items-center
+        .section-bg
+          img(src="./assets/images/bg-banner-guest.jpeg", alt="")
+        .item-wrapper
+          h1.guest-hero-title.mulish-font
+            |Welcome to #[br] our
+            span 
+              include ./includes/components/mask-bg.pug
+              span.text.oswald-font community
+          p.mulish-font Fuse helps developers to build organized and well coded dashboards full of beautiful and rich modules. Join us and start building your application today.

@@ -18,8 +18,9 @@
     text-transform: uppercase;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
+    margin: 0;
   }
-  
+
   .button-icon-hover,
   .button-icon {
     flex: 0 0 15px;
@@ -27,7 +28,12 @@
     margin: 0 0 0 5px;
   }
 
+  &.radius {
+    border-radius: 5px;
+  }
+
   &.hover-effect {
+
     .button-icon-hover,
     .button-title,
     .button-icon {
@@ -38,24 +44,29 @@
       .button-title {
         transform: translateX(10px);
       }
+
       .button-icon-hover {
         transform: rotate(45deg);
       }
+
       .button-icon {
         transform: translateX(100px) rotate(45deg);
         opacity: 0;
       }
+
       .button-hover {
         .button-overlay-dark {
           transform: translateX(calc(200% + 1px));
           transition-delay: 0.1s;
         }
+
         .button-overlay-light {
           transform: translateX(calc(0% + 1px));
           transition-delay: 0.3s;
         }
       }
     }
+
     .button-hover {
       position: absolute;
       top: 0;
@@ -63,8 +74,9 @@
       width: 100%;
       height: 100%;
       pointer-events: none;
+
       .button-overlay-dark {
-        background: rgba(0,0,0,0.3);
+        background: rgba(0, 0, 0, 0.3);
         position: absolute;
         width: 50%;
         height: 100%;
@@ -75,8 +87,9 @@
         transition-delay: 0s;
         z-index: 2;
       }
+
       .button-overlay-light {
-        background: rgba(0,0,0,0.1);
+        background: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(1px);
         position: absolute;
         width: 100%;
@@ -90,8 +103,10 @@
       }
     }
   }
+
   &.reverse {
     flex-direction: row-reverse;
+
     .button-icon {
       margin-left: 0;
       margin-right: 5px;
@@ -101,8 +116,24 @@
   &.primary {
     border-color: $primary;
     background: $primary;
+
     .button-title {
       color: $white;
+    }
+  }
+
+  &.white {
+    border-color: $white;
+    background: $white;
+
+    .button-hover {
+      .button-overlay-light {
+        background: rgba(89, 129, 91, 0.2);
+      }
+    }
+
+    .button-title {
+      color: $primary;
     }
   }
 
@@ -110,15 +141,18 @@
     border-color: transparent;
     background: transparent;
     padding: 0px 8px;
+
     .button-title {
       color: $black;
     }
+
     .button-hover {
       .button-overlay-dark {
-        background: rgba(0,0,0,0.1);
+        background: rgba(0, 0, 0, 0.1);
       }
+
       .button-overlay-light {
-        background: rgba(0,0,0,0.0);
+        background: rgba(0, 0, 0, 0.0);
       }
     }
   }

@@ -1,0 +1,35 @@
+.section-authen-overview {
+  padding: 35px;
+  .section-wrapper {
+    .overview-item {
+      padding: 12px 24px 24px 24px;
+      border-radius: 10px;
+      @include box-shadow;
+      background: $white;
+      flex: 0 0 calc(100% / 4 - 15px);
+      max-width: calc(100% / 4 - 15px);
+      .item-title {
+        color: $text-black;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: 'Mulish', sans-serif;
+        .btn-icon {
+          transform: translate(10px, 2px);
+        }
+      }
+      .item-total {
+        font-weight: bold;
+        font-size: 64px;
+        color: $primary;
+        text-align: center;
+      }
+      .item-des {
+        text-align: center;
+        color: $primary;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: 'Mulish', sans-serif;
+      }
+    }
+  }
+}
