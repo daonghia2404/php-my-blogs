@@ -1,5 +1,15 @@
 header.header-authen {
+  position: fixed;
   background: $white;
+  width: 100%;
+  z-index: 9;
+  transition: 0.3s ease;
+  top: 0;
+  @include box-shadow;
+
+  &.active {
+    width: calc(100% - 280px);
+  }
   .header-wrapper {
     height: 64px;
     padding: 0 30px;

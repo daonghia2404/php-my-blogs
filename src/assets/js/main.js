@@ -69,13 +69,15 @@ const header = {
     }
   },
   expandMenuAuthen: function() {
+    const menuHeader = document.querySelector('.header-authen')
     const menuBtn = document.querySelector('.header-authen .header-bars')
     const menuMain = document.querySelector('.authen-sidebar')
     const body = document.querySelector('body.body-authen')
-    if (menuBtn && menuMain && body) {
+    if (menuHeader && menuBtn && menuMain && body) {
       menuBtn.addEventListener('click', () => {
         menuMain.classList.toggle('active')
         body.classList.toggle('active')
+        menuHeader.classList.toggle('active')
       })
     }
   },

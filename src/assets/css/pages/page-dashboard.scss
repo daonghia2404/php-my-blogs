@@ -1,0 +1,12 @@
+.page-dashboard {
+  .section-lastest-blog {
+    padding: 17.5px 35px;
+  }
+  .section-column-wrapper {
+    padding: 17.5px 35px;
+    .section-column {
+      flex: 0 0 calc(100% / 2 - 15px);
+      max-width: calc(100% / 2 - 15px);
+    }
+  }
+}

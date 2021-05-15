@@ -1,5 +1,5 @@
 .section-authen-overview {
-  padding: 35px;
+  padding: 35px 35px 17.5px 35px;
   .section-wrapper {
     .overview-item {
       padding: 12px 24px 24px 24px;
@@ -10,8 +10,8 @@
       max-width: calc(100% / 4 - 15px);
       .item-title {
         color: $text-black;
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: bold;
         font-family: 'Mulish', sans-serif;
         .btn-icon {
           transform: translate(10px, 2px);

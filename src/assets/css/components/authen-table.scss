@@ -1,0 +1,145 @@
+.authen-table {
+  padding: 12px 24px;
+  border-radius: 10px;
+  @include box-shadow;
+  background: $white;
+  .table-header {
+    .table-name {
+      font-family: 'Mulish', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .table-body {
+    margin-top: 15px;
+    overflow-x: auto;
+    overflow-y: unset;
+    @include scrollBarStyle;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        td {
+          font-weight: bold;
+          border-top: 1px solid $border;
+          border-bottom: 1px solid $border;
+        }
+      }
+      tr {
+        &:not(:last-of-type) {
+          td {
+            border-bottom: 1px solid $border;
+          }
+        }
+      }
+      td {
+        color: $gray;
+        font-size: 14px;
+        padding: 10px;
+        font-family: 'Mulish', sans-serif;
+        &.center {
+          text-align: center;
+        }
+        &.min-width-200 {
+          min-width: 200px;
+        }
+        &.table-action {
+          width: 40px;
+        }
+        .table-ellipsis-2 {
+          font-family: 'Mulish', sans-serif;
+          @include ellipsis(2);
+        }
+        p {
+          font-family: 'Mulish', sans-serif;
+          margin: 0;
+        }
+        a.table-link {
+          color: $primary;
+          font-weight: bold;
+          font-family: 'Mulish', sans-serif;
+          @include styleUnderline();
+          &:hover {
+            @include hoverStyleUnderline();
+          }
+        }
+
+        .table-image {
+          width: 40px;
+          height: 40px;
+          border-radius: 4px;
+          overflow: hidden;
+          &.avatar {
+            border-radius: 50%
+          }
+          @include centerImage;
+        }
+
+        .table-tags {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          &.auto {
+            .tag-item {
+              color: $white;
+              &:nth-of-type(n + 1) {
+                background: $primary;
+              }
+              &:nth-of-type(n + 2) {
+                background: $blue-sky;
+              }
+              &:nth-of-type(n + 3) {
+                background: $orange;
+              }
+              &:nth-of-type(n + 4) {
+                background: $pink;
+              }
+              &:nth-of-type(n + 5) {
+                background: $purple;
+              }
+            }
+          }
+
+          .tag-item {
+            margin: 3px;
+            font-size: 10px;
+            white-space: nowrap;
+            padding: 3px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-family: 'Mulish', sans-serif;
+            text-transform: uppercase;
+            &.success {
+              color: $white;
+              background: $success;
+            }
+            &.error {
+              color: $white;
+              background: $error;
+            }
+            &.warning {
+              color: $white;
+              background: $warning;
+            }
+            &.normal {
+              color: $white;
+              background: $blue-sky;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .table-footer {
+    padding: 15px 0;
+    border-top: 1px solid $border;
+    .table-total {
+      color: $gray;
+      font-size: 12px;
+      margin: 0;
+      font-family: 'Mulish', sans-serif;
+      font-weight: bold;
+    }
+  }
+}
