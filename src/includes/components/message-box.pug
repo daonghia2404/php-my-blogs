@@ -1,0 +1,9 @@
+mixin MessageBox(type, text)
+  .form-message-box.flex.items-start(class=`${type}`)
+    if type === 'success'
+      img(src="./assets/icons/icon-success-green.svg", alt="")
+    if type === 'error'
+      img(src="./assets/icons/icon-error-red.svg", alt="")
+    = text
+    
+  

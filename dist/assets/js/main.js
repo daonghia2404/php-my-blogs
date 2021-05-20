@@ -10,6 +10,7 @@ const header = {
     this.expandSearch()
     this.expandMenuMobile()
     this.expandCategoryMobile()
+    this.expandMenuAuthen()
   },
   expandSearch: function() {
     const searchBtnIcon = document.querySelector('.section-header .header-item.search svg')
@@ -66,7 +67,20 @@ const header = {
         body.style.overflow = 'auto'
       })
     }
-  }
+  },
+  expandMenuAuthen: function() {
+    const menuHeader = document.querySelector('.header-authen')
+    const menuBtn = document.querySelector('.header-authen .header-bars')
+    const menuMain = document.querySelector('.authen-sidebar')
+    const body = document.querySelector('body.body-authen')
+    if (menuHeader && menuBtn && menuMain && body) {
+      menuBtn.addEventListener('click', () => {
+        menuMain.classList.toggle('active')
+        body.classList.toggle('active')
+        menuHeader.classList.toggle('active')
+      })
+    }
+  },
 }
 
 const owlCarousel = {
@@ -136,6 +150,9 @@ const vanillaTilt = {
     const options = {
       max: 5,
     }
-    VanillaTilt.init(document.querySelectorAll(".target-tilt"), options)
+    const allTilt = document.querySelectorAll(".target-tilt")
+    if (allTilt.length > 0) {
+      VanillaTilt.init(allTilt, options)
+    }
   }
 }

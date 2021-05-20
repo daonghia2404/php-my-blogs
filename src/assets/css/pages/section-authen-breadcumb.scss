@@ -1,0 +1,26 @@
+.section-authen-breadcumb {
+  padding: 17.5px 35px;
+  padding-bottom: 0;
+  .icon-back {
+    width: 10px;
+    fill: $gray;
+    margin-right: 5px;
+  }
+  a, span {
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    margin: 0 5px;
+    display: block;
+    color: $gray;
+    font-weight: bold;
+  }
+  a {
+    @include styleUnderline();
+    &:hover {
+      @include hoverStyleUnderline();
+    }
+  }
+  span {
+    color: $primary;
+  }
+}

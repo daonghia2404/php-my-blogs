@@ -147,6 +147,10 @@ section.section {
 		justify-content: space-between;
 		flex-wrap: wrap;
 
+		&.auto {
+			justify-content: flex-start;
+		}
+
 		&.single {
 			.form-item {
 				flex: 0 0 100%;
@@ -189,7 +193,35 @@ section.section {
 		font-size: 14px;
 	}
 	.form-item {
+		position: relative;
 		margin-bottom: 7.5px;
+		&.horizontal {
+			display: flex;
+			align-items: center;
+			.form-label {
+				margin: 0 10px 0 0;
+			}
+		}
+		&.search {
+			border: 1px solid $border;
+			border-radius: 5px;
+			input {
+				border: none;
+				padding-right: 40px;
+				height: 52px;
+				&.medium {
+					height: 43px;
+				}
+			}
+			.btn-search {
+				z-index: 2;
+				position: absolute;
+				right: 5px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+		select,
 		textarea,
 		input {
 			outline: none;
@@ -214,13 +246,36 @@ section.section {
 			&.radius {
 				border-radius: 5px;
 			}
+			&.medium {
+				height: 45px;
+			}
 		}
 		textarea {
 			min-height: 190px;
 			padding: 15px;
 		}
+		select {
+			-moz-appearance:none; /* Firefox */
+			-webkit-appearance:none; /* Safari and Chrome */
+			appearance:none;
+			background: transparent;
+			background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+			background-repeat: no-repeat;
+			background-position-x: 98%;
+			background-position-y: 50%;
+		}
 		button {
 			width: 100%;
+		}
+	}
+	.form-message {
+		font-family: 'Mulish', sans-serif;
+		font-size: 12px !important;
+		&.error {
+			color: $error;
+		}
+		&.success {
+			color: $success;
 		}
 	}
 }
@@ -399,8 +454,8 @@ section.section {
 }
 
 .btn-icon {
-	width: 40px;
-	height: 40px;
+	width: 40px !important;
+	height: 40px !important;
 	border-radius: 50%;
 	transition: 0.3s ease;
 	cursor: pointer;

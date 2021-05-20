@@ -7,6 +7,8 @@ block pages
           .item-logo 
             img(src="./assets/images/logo-footer.png", alt="") 
           h4.guest-title Sign In 
+          include ./includes/components/message-box.pug
+          +MessageBox('error', 'Error message')
           form(action="#").custom-style-form
             .form-group.single
               .form-item
@@ -23,6 +25,10 @@ block pages
                 +Checkbox({ label: 'Remember me', id: 'rememberMe' })
               .form-item.text-right
                 a(href="#") Forgot password
+
+            .from-group 
+              .form-item 
+                p.form-message.error Email or Password not correctly !
 
             .form-group.single(style="margin-top: 30px;")
               .form-item 
