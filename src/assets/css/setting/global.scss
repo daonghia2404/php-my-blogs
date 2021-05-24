@@ -304,6 +304,7 @@ section.section {
 	.form-message {
 		font-family: 'Mulish', sans-serif;
 		font-size: 12px !important;
+		margin: 5px 0;
 		&.error {
 			color: $error;
 		}

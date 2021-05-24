@@ -610,7 +610,8 @@ section.section {
       width: 100%; }
   .custom-style-form .form-message {
     font-family: 'Mulish', sans-serif;
-    font-size: 12px !important; }
+    font-size: 12px !important;
+    margin: 5px 0; }
     .custom-style-form .form-message.error {
       color: #e74c3c; }
     .custom-style-form .form-message.success {
