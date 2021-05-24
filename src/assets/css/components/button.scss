@@ -137,6 +137,21 @@
     }
   }
 
+  &.gray-light {
+    border-color: $border;
+    background: $border-light;
+
+    .button-hover {
+      .button-overlay-light {
+        background: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .button-title {
+      color: $gray;
+    }
+  }
+
   &.default {
     border-color: transparent;
     background: transparent;

@@ -1,0 +1,68 @@
+extends includes/layout/layout-authen.pug
+block pages 
+  include includes/pages/section-authen-intro.pug
+  include includes/pages/section-authen-breadcumb.pug
+  include includes/components/button.pug
+
+  .page-dashboard
+    .section-lastest-blog 
+      .authen-table.custom-style-form 
+        .table-header.flex.items-center.justify-content-between 
+          .table-name Edit User 
+        
+        .table-main
+          include ./includes/components/message-box.pug
+          +MessageBox('error', 'Error message')
+          
+          .row 
+            .col-8
+              .form-group.two 
+                .form-item
+                  .form-label Username #[span *]
+                  input(type="text" placeholder="Enter username").border-gray.radius.medium
+                .form-item
+                  .form-label Email #[span *]
+                  input(type="text" placeholder="Enter email").border-gray.radius.medium
+              .form-group.two 
+                .form-item
+                  .form-label Role #[span *]
+                  select.border-gray.radius.medium
+                    option(value="#") SUPER ADMIN
+                    option(value="#") ADMIN
+                    option(value="#") EDITOR
+                    option(value="#") VIEWER
+                .form-item
+                  .form-label Email #[span *]
+                  select.border-gray.radius.medium
+                    option(value="#") Active
+                    option(value="#") Unactive
+              .form-group.two 
+                .form-item
+                  .form-label New Password
+                  input(type="password" placeholder="Enter password").border-gray.radius.medium
+                  .form-message.error Password is required
+            .col-4
+              .form-group.single
+                .form-item 
+                  .form-label Avatar
+                  .upload-wrapper
+                    input(type="file")
+
+                    .upload-placeholder.flex.flex-column.items-center.justify-center
+                      img.upload-icon(src="./assets/icons/icon-photo-gray.svg", alt="")
+                      .upload-text Upload Avatar
+
+                    .upload-image(style="display: none;")
+                      img(src="./assets/images/bg-banner-guest.jpeg", alt="")
+
+            .col-12
+              .line
+              .form-group.justify-content-end(style="margin-top: 25px;")
+                .form-item 
+                  +Button({ link: '#', title: 'Cancel', icon: './assets/icons/icon-cancel-gray.svg', className: 'gray-light radius', isHover: true })
+                .form-item.ml-3
+                  +Button({ link: '#', title: 'Save', icon: './assets/icons/icon-save-white.svg', className: 'primary radius', isHover: true })
+
+
+
+        

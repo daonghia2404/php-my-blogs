@@ -101,53 +101,84 @@
       <div class="section-lastest-blog"> 
         <div class="authen-table custom-style-form"> 
           <div class="table-header flex items-center justify-content-between"> 
-            <div class="table-name">Blog Managerment</div>
+            <div class="table-name">Edit User </div>
           </div>
-          <div class="table-action">
-            <div class="form-group auto">
-              <div class="form-item search">
-                <input class="border-gray radius medium" type="text" placeholder="Search">
-                <button class="btn-icon btn-search"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.005 512.005" style="enable-background:new 0 0 512.005 512.005;" xml:space="preserve"> <path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667 S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6 c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"/> </svg></button>
+          <div class="table-main">
+                        <div class="form-message-box flex items-start error"><img src="./assets/icons/icon-error-red.svg" alt="">Error message
+                        </div>
+            <div class="row"> 
+              <div class="col-8">
+                <div class="form-group two"> 
+                  <div class="form-item">
+                    <div class="form-label">Username <span>*</span></div>
+                    <input class="border-gray radius medium" type="text" placeholder="Enter username">
+                  </div>
+                  <div class="form-item">
+                    <div class="form-label">Email <span>*</span></div>
+                    <input class="border-gray radius medium" type="text" placeholder="Enter email">
+                  </div>
+                </div>
+                <div class="form-group two"> 
+                  <div class="form-item">
+                    <div class="form-label">Role <span>*</span></div>
+                    <select class="border-gray radius medium">
+                      <option value="#">SUPER ADMIN</option>
+                      <option value="#">ADMIN</option>
+                      <option value="#">EDITOR</option>
+                      <option value="#">VIEWER</option>
+                    </select>
+                  </div>
+                  <div class="form-item">
+                    <div class="form-label">Email <span>*</span></div>
+                    <select class="border-gray radius medium">
+                      <option value="#">Active</option>
+                      <option value="#">Unactive</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group two"> 
+                  <div class="form-item">
+                    <div class="form-label">New Password</div>
+                    <input class="border-gray radius medium" type="password" placeholder="Enter password">
+                    <div class="form-message error">Password is required</div>
+                  </div>
+                </div>
               </div>
-              <div class="form-item"> 
-                <select class="border-gray radius medium">
-                  <option value="#">Category </option>
-                  <option value="#">Vacation </option>
-                  <option value="#">Camping </option>
-                  <option value="#">Fiendly </option>
-                  <option value="#">Popular </option>
-                </select>
+              <div class="col-4">
+                <div class="form-group single">
+                  <div class="form-item"> 
+                    <div class="form-label">Avatar</div>
+                    <div class="upload-wrapper">
+                      <input type="file">
+                      <div class="upload-placeholder flex flex-column items-center justify-center"><img class="upload-icon" src="./assets/icons/icon-photo-gray.svg" alt="">
+                        <div class="upload-text">Upload Avatar</div>
+                      </div>
+                      <div class="upload-image" style="display: none;"><img src="./assets/images/bg-banner-guest.jpeg" alt=""></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="form-item horizontal action-show-items">
-                <div class="form-label">Show </div>
-                <select class="border-gray radius medium">
-                  <option value="#">5 </option>
-                  <option value="#">10 </option>
-                  <option value="#">15 </option>
-                  <option value="#">20 </option>
-                </select>
+              <div class="col-12">
+                <div class="line"></div>
+                <div class="form-group justify-content-end" style="margin-top: 25px;">
+                  <div class="form-item"> 
+                        <button class="button-component flex items-center justify-center gray-light radius hover-effect">
+                          <div class="button-hover"> 
+                            <div class="button-overlay-dark"> </div>
+                            <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-cancel-gray.svg" alt=""></div>
+                          </div><a class="button-title" href="#">Cancel</a><img class="button-icon" src="./assets/icons/icon-cancel-gray.svg" alt="">
+                        </button>
+                  </div>
+                  <div class="form-item ml-3">
+                        <button class="button-component flex items-center justify-center primary radius hover-effect">
+                          <div class="button-hover"> 
+                            <div class="button-overlay-dark"> </div>
+                            <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-save-white.svg" alt=""></div>
+                          </div><a class="button-title" href="#">Save</a><img class="button-icon" src="./assets/icons/icon-save-white.svg" alt="">
+                        </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="table-body">
-            <table> 
-              <thead> 
-                <tr> 
-                  <td class="center">#</td>
-                  <td>Poster</td>
-                  <td>Title </td>
-                  <td>Description </td>
-                  <td class="center">Author</td>
-                  <td class="center">Category </td>
-                  <td class="center">Status</td>
-                  <td class="center">Created At </td>
-                  <td class="table-action"></td>
-                </tr>
-              </thead>
-            </table>
-            <div class="table-no-data flex items-center justify-center flex-column">
-              <div class="no-data-icon flex items-center justify-center"><img src="./assets/icons/icon-no-data-green.svg" alt=""></div>
-              <div class="no-data-text">Sorry, there are no data in here</div>
             </div>
           </div>
         </div>

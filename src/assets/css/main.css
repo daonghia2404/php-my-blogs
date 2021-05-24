@@ -495,6 +495,9 @@ section.section {
     margin-bottom: 10px;
     font-family: 'Mulish', sans-serif;
     color: #1e1e1e; }
+  .custom-style-form .form-label span {
+    color: #e74c3c;
+    font-weight: bold; }
   .custom-style-form a {
     color: #59815b;
     font-size: 14px; }
@@ -521,6 +524,40 @@ section.section {
         right: 5px;
         top: 50%;
         transform: translateY(-50%); }
+    .custom-style-form .form-item .upload-wrapper {
+      position: relative;
+      background: rgba(231, 231, 231, 0.45);
+      border: 1px solid #e1e1e1;
+      border-radius: 5px;
+      overflow: hidden; }
+      .custom-style-form .form-item .upload-wrapper .upload-placeholder {
+        padding: 60px 30px; }
+        .custom-style-form .form-item .upload-wrapper .upload-placeholder .upload-icon {
+          width: 30px;
+          margin-bottom: 8px; }
+        .custom-style-form .form-item .upload-wrapper .upload-placeholder .upload-text {
+          text-align: center;
+          font-size: 14px;
+          font-family: 'Mulish', sans-serif;
+          color: #878787; }
+      .custom-style-form .form-item .upload-wrapper input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2; }
+      .custom-style-form .form-item .upload-wrapper .upload-image {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .custom-style-form .form-item .upload-wrapper .upload-image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center; }
     .custom-style-form .form-item select,
     .custom-style-form .form-item textarea,
     .custom-style-form .form-item input {
@@ -894,6 +931,13 @@ section.section {
       background: rgba(89, 129, 91, 0.2); }
     .button-component.white .button-title {
       color: #59815b; }
+  .button-component.gray-light {
+    border-color: #e1e1e1;
+    background: rgba(231, 231, 231, 0.45); }
+    .button-component.gray-light .button-hover .button-overlay-light {
+      background: rgba(255, 255, 255, 0.2); }
+    .button-component.gray-light .button-title {
+      color: #878787; }
   .button-component.default {
     border-color: transparent;
     background: transparent;
@@ -1417,6 +1461,8 @@ section.banner {
         margin-left: auto; }
         .authen-table .table-action .form-group .form-item.action-show-items select {
           width: 80px; }
+  .authen-table .table-main {
+    margin-top: 15px; }
   .authen-table .table-body {
     margin-top: 15px;
     overflow-x: auto;
@@ -1541,6 +1587,21 @@ section.banner {
       margin: 0;
       font-family: 'Mulish', sans-serif;
       font-weight: bold; }
+  .authen-table .table-no-data {
+    padding: 50px 15px; }
+    .authen-table .table-no-data .no-data-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #F0EFE7;
+      margin-bottom: 15px; }
+      .authen-table .table-no-data .no-data-icon img {
+        width: 35px; }
+    .authen-table .table-no-data .no-data-text {
+      text-align: center;
+      font-size: 16px;
+      font-family: 'Mulish', sans-serif;
+      color: #878787; }
 
 .form-message-box {
   padding: 12px 10px;

@@ -188,6 +188,10 @@ section.section {
 		font-family: 'Mulish', sans-serif;
 		color: $text-black;
 	}
+	.form-label span {
+		color: $error;
+		font-weight: bold;
+	}
 	a {
 		color: $primary;
 		font-size: 14px;
@@ -219,6 +223,35 @@ section.section {
 				right: 5px;
 				top: 50%;
 				transform: translateY(-50%);
+			}
+		}
+		.upload-wrapper {
+			position: relative;
+			background: $border-light;
+			border: 1px solid $border;
+			border-radius: 5px;
+			overflow: hidden;
+			.upload-placeholder {
+				padding: 60px 30px;
+				.upload-icon {
+					width: 30px;
+					margin-bottom: 8px;
+				}
+				.upload-text {
+					text-align: center;
+					font-size: 14px;
+					font-family: 'Mulish', sans-serif;
+					color: $gray;
+				}
+			}
+			input[type="file"] {
+				@include fullAbsolute;
+				cursor: pointer;
+				opacity: 0;
+				z-index: 2;
+			}
+			.upload-image {
+				@include centerImage();
 			}
 		}
 		select,
