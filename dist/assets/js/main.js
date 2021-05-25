@@ -3,6 +3,17 @@ window.onload = () => {
   // owlCarousel.init();
   header.init()
   vanillaTilt.init()
+  loader.init()
+}
+
+const loader = {
+  init: function() {
+    this.loading()
+  },
+  loading: function() {
+    const loader = document.querySelector('.loader')
+    if (loader) loader.classList.add('loaded')
+  },
 }
 
 const header = {
