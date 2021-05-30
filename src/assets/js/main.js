@@ -4,6 +4,74 @@ window.onload = () => {
   header.init()
   vanillaTilt.init()
   loader.init()
+  modal.init()
+}
+
+const modal = {
+  init: function() {
+    this.modalDelete()
+    this.modalUpload()
+    this.modalPreview()
+  },
+  modalDelete: function() {
+    const btnOpenModal = document.querySelectorAll('.open-modal-delete')
+    const modal = document.querySelector('#modalDelete')
+    if (modal) {
+      const inputId = modal.querySelector('input[name="modalTargetId"]')
+      const inputName = modal.querySelector('input[name="modalTargetName"]')
+
+      btnOpenModal.forEach((item, index) => item.addEventListener('click', () => {
+        inputId.value = item.dataset.id
+        inputName.value = item.dataset.name
+      }))
+    }
+  },
+  modalPreview: function() {
+    const btnOpenModal = document.querySelectorAll('.open-modal-preview')
+    const modal = document.querySelector('#modalPreview')
+    if (modal) {
+      const img = modal.querySelector('img')
+      const inputName = modal.querySelector('input[name="modalTargetName"]')
+
+      btnOpenModal.forEach((item, index) => item.addEventListener('click', () => {
+        img.src = item.dataset.image
+      }))
+    }
+  },
+  modalUpload: function() {
+    const btnOpenModal = document.querySelectorAll('.open-modal-upload')
+    const modal = document.querySelector('#modalUpload')
+    if (modal) {
+      let targetId = ''
+      const fileChoose = modal.querySelector('input[name="fileChoose"]')
+      const submit = modal.querySelector('.submit-modal-upload')
+
+      btnOpenModal.forEach((item, index) => item.addEventListener('click', () => {
+        targetId = item.dataset.id
+      }))
+
+      const listUpload = modal.querySelectorAll('.list-upload .upload-item')
+      listUpload.forEach((item, index) => item.addEventListener('click', () => {
+        listUpload.forEach(i => i.classList.remove('active'))
+        item.classList.add('active')
+        fileChoose.value = item.querySelector('img').src
+      }))
+
+      submit.addEventListener('click', () => {
+        const target = document.querySelector(`#${targetId}`)
+        if (target && fileChoose.value) {
+          const placeholder = target.querySelector('.upload-placeholder')
+          const uploadImage = target.querySelector('.upload-image')
+          const input = target.querySelector('input[name="path"]')
+
+          placeholder.style.display = 'none'
+          uploadImage.style.display = 'block'
+          uploadImage.querySelector('img').src = fileChoose.value
+          input.value = fileChoose.value
+        }
+      })
+    }
+  },
 }
 
 const loader = {

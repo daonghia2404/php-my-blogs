@@ -18,7 +18,9 @@
         flex: 0 0 calc(100% / 5 - 7.5px);
         max-width: calc(100% / 5 - 7.5px);
         margin-right: 7.5px;
-        &.action-show-items {
+        &.action-table-right {
+          max-width: 100%;
+          flex: 1;
           justify-content: flex-end;
           margin-left: auto;
           select {
@@ -169,23 +171,25 @@
       font-weight: bold;
     }
   }
-  .table-no-data {
-    padding: 50px 15px;
-    .no-data-icon {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      background: $brown-light;
-      margin-bottom: 15px;
-      img {
-        width: 35px;
-      }
+}
+
+.table-no-data {
+  padding: 50px 15px;
+  height: 100%;
+  .no-data-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: $brown-light;
+    margin-bottom: 15px;
+    img {
+      width: 35px;
     }
-    .no-data-text {
-      text-align: center;
-      font-size: 16px;
-      font-family: 'Mulish', sans-serif;
-      color: $gray;
-    }
+  }
+  .no-data-text {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    color: $gray;
   }
 }

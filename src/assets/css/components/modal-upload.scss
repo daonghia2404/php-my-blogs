@@ -1,0 +1,87 @@
+#modalUpload {
+  .modal-dialog {
+    max-width: 1200px;
+  }
+  .modal-upload-wrapper {
+    .modal-title {
+      text-align: center;
+      font-size: 22px;
+      font-family: 'Mulish', sans-serif;
+      margin-bottom: 25px;
+    }
+    .list-upload {
+      border-right: 1px solid $border-light;
+      .upload-item {
+        flex: 0 0 140px;
+        max-width: 140px;
+        height: 140px;
+        border-radius: 5px;
+        overflow: hidden;
+        @include centerImage;
+        margin: 0 10px 10px 0;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+        cursor: pointer;
+        position: relative;
+
+        &::before,
+        &::after {
+          @include fullAbsolute;
+          content: '';
+          transition: 0.3s ease;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        &::before {
+          background: rgba(0,0,0,0.4);
+          z-index: 1;
+        }
+
+        &::after {
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 30px;
+          height: 30px;
+          background: url('../icons/icon-check-mark-white.svg');
+          background-size: cover;
+          background-position: center;
+          z-index: 2;
+        }
+
+        &:hover,
+        &.active {
+          border-color: $primary;
+        }
+
+        &.active {
+          &::before,
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .modal-btn-group {
+      margin-bottom: 10px;
+      .button-component {
+        margin-left: 10px;
+        width: 120px;
+      }
+    }
+    .col-4 {
+      padding-left: 10px;
+      .form-group,
+      .form-item,
+      .upload-wrapper,
+      .upload-placeholder {
+        height: 100%;
+      }
+      .upload-wrapper {
+        border-width: 2px;
+        border-style: dashed;
+      }
+    }
+  }
+}

@@ -27,6 +27,12 @@
     max-width: 15px;
     margin: 0 0 0 5px;
   }
+  &.width-auto {
+    width: auto !important;
+  }
+  &.medium {
+    padding: 11px 15px;
+  }
 
   &.radius {
     border-radius: 5px;
@@ -116,6 +122,15 @@
   &.primary {
     border-color: $primary;
     background: $primary;
+
+    .button-title {
+      color: $white;
+    }
+  }
+
+  &.red {
+    border-color: $error;
+    background: $error;
 
     .button-title {
       color: $white;

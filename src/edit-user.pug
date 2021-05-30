@@ -3,6 +3,7 @@ block pages
   include includes/pages/section-authen-intro.pug
   include includes/pages/section-authen-breadcumb.pug
   include includes/components/button.pug
+  include includes/components/modal-upload.pug
 
   .page-dashboard
     .section-lastest-blog 
@@ -45,12 +46,12 @@ block pages
               .form-group.single
                 .form-item 
                   .form-label Avatar
-                  .upload-wrapper
-                    input(type="file")
+                  .upload-wrapper.open-modal-upload(data-toggle="modal" data-target="#modalUpload" data-id="uploadAvatar")#uploadAvatar
+                    input(type="hidden" name="path")
 
                     .upload-placeholder.flex.flex-column.items-center.justify-center
                       img.upload-icon(src="./assets/icons/icon-photo-gray.svg", alt="")
-                      .upload-text Upload Avatar
+                      .upload-text Select Image
 
                     .upload-image(style="display: none;")
                       img(src="./assets/images/bg-banner-guest.jpeg", alt="")

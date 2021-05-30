@@ -1,0 +1,37 @@
+.modal.fade#modalUpload(tabindex="-1" aria-hidden="true")
+  .modal-dialog.modal-dialog-centered
+    .modal-content
+      .modal-body
+        .modal-upload-wrapper.custom-style-form
+          .modal-title Upload
+          .row 
+            .col-8 
+              input(type="hidden" name="fileChoose")
+              .list-upload.flex.flex-wrap 
+                each item in [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
+                  .upload-item
+                    img(src=`./assets/images/image-blog-${item}.jpeg`, alt="")
+              .table-no-data.flex.items-center.justify-center.flex-column
+                .no-data-icon.flex.items-center.justify-center
+                  img(src="./assets/icons/icon-no-data-green.svg", alt="")
+                .no-data-text Sorry, there are no data in here
+            form(action="#").col-4 
+              .form-group.single
+                .form-item 
+                  .upload-wrapper
+                    input(type="file" onchange="this.form.submit()").js-input-file
+
+                    .upload-placeholder.flex.flex-column.items-center.justify-center
+                      img.upload-icon(src="./assets/icons/icon-photo-gray.svg", alt="")
+                      .upload-text Upload Image
+
+                    .upload-image(style="display: none;")
+                      img(src="./assets/images/bg-banner-guest.jpeg", alt="")
+
+          .line 
+          .modal-btn-group.flex.justify-end
+            include button.pug 
+            .group-item(data-dismiss="modal")
+              +Button({ link: '#', title: 'Close', icon: './assets/icons/icon-cancel-gray.svg', className: 'gray-light radius medium', isHover: true })
+            .group-item(data-dismiss="modal")
+              +Button({ link: '#', title: 'Choose File', icon: './assets/icons/icon-upload-white.svg', className: 'primary radius medium submit-modal-upload', isHover: true })

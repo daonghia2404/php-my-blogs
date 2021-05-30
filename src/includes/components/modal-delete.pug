@@ -1,0 +1,15 @@
+.modal.fade#modalDelete(tabindex="-1" aria-hidden="true")
+  .modal-dialog
+    .modal-content
+      .modal-body
+        form(action="#").modal-delete-wrapper 
+          input(type="hidden" name="modalTargetId" value="")
+          input(type="hidden" name="modalTargetName" value="")
+          .modal-title Delete 
+          .modal-des Are you sure want to delete this item. This action will not be undone
+          .modal-btn-group.flex.justify-center
+            include button.pug 
+            .group-item(data-dismiss="modal")
+              +Button({ link: '#', title: 'Cancel', icon: './assets/icons/icon-cancel-gray.svg', className: 'gray-light radius medium', isHover: true })
+            .group-item
+              +Button({ link: '#', title: 'Delete', icon: './assets/icons/icon-trash-white.svg', className: 'red radius medium', isHover: true })

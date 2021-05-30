@@ -231,6 +231,7 @@ section.section {
 			border: 1px solid $border;
 			border-radius: 5px;
 			overflow: hidden;
+			cursor: pointer;
 			.upload-placeholder {
 				padding: 60px 30px;
 				.upload-icon {
@@ -531,4 +532,8 @@ section.section {
 	&.active {
 		padding-left: 280px;
 	}
+}
+
+.modal-open .modal {
+	@include scrollBarStyle;
 }
