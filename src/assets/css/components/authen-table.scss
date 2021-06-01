@@ -62,6 +62,9 @@
         font-family: 'Mulish', sans-serif;
         &.center {
           text-align: center;
+          .table-image {
+            margin: 0 auto;
+          }
         }
         &.min-width-200 {
           min-width: 200px;

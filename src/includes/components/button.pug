@@ -6,6 +6,9 @@ mixin Button(data)
         .button-overlay-light.flex.items-center.justify-center 
           img(src=`${data.icon}`, alt="").button-icon-hover
 
+    if (data.type === 'upload')
+      input(type="file").button-upload
+
     if (data.link)
       a(href=`${data.link}`).button-title= data.title
     else

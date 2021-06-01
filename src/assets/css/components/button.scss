@@ -11,6 +11,13 @@
     padding: 10px 30px;
   }
 
+  .button-upload {
+    @include fullAbsolute;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+  }
+
   .button-title {
     line-height: 1.5;
     font-size: 14px;
@@ -67,7 +74,7 @@
         }
 
         .button-overlay-light {
-          transform: translateX(calc(0px + 1px));
+          transform: translateX(1px);
           transition-delay: 0.3s;
         }
       }
