@@ -172,7 +172,7 @@
       <div class="section-lastest-blog"> 
         <div class="authen-table custom-style-form"> 
           <div class="table-header flex items-center justify-content-between"> 
-            <div class="table-name">Edit User </div>
+            <div class="table-name">Edit Blog </div>
           </div>
           <div class="table-main">
                         <div class="form-message-box flex items-start error"><img src="./assets/icons/icon-error-red.svg" alt="">Error message
@@ -181,44 +181,54 @@
               <div class="col-8">
                 <div class="form-group two"> 
                   <div class="form-item">
-                    <div class="form-label">Username <span>*</span></div>
-                    <input class="border-gray radius medium" type="text" placeholder="Enter username">
+                    <div class="form-label">Title <span>*</span></div>
+                    <input class="border-gray radius medium" type="text" placeholder="Enter title">
                   </div>
                   <div class="form-item">
-                    <div class="form-label">Email <span>*</span></div>
-                    <input class="border-gray radius medium" type="text" placeholder="Enter email">
+                    <div class="form-label">Author <span>*</span></div>
+                    <select class="border-gray radius medium">
+                      <option value="#">Author 1</option>
+                      <option value="#">Author 2</option>
+                      <option value="#">Author 3</option>
+                      <option value="#">Author 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group single"> 
+                  <div class="form-item">
+                    <div class="form-label">Description <span>*</span></div>
+                    <textarea class="border-gray radius" placeholder="Enter description"></textarea>
                   </div>
                 </div>
                 <div class="form-group two"> 
                   <div class="form-item">
-                    <div class="form-label">Role <span>*</span></div>
+                    <div class="form-label">Category <span>*</span></div>
                     <select class="border-gray radius medium">
-                      <option value="#">SUPER ADMIN</option>
-                      <option value="#">ADMIN</option>
-                      <option value="#">EDITOR</option>
-                      <option value="#">VIEWER</option>
+                      <option value="#">Category 1</option>
+                      <option value="#">Category 2</option>
+                      <option value="#">Category 3</option>
+                      <option value="#">Category 4</option>
                     </select>
                   </div>
                   <div class="form-item">
-                    <div class="form-label">Email <span>*</span></div>
+                    <div class="form-label">Status <span>*</span></div>
                     <select class="border-gray radius medium">
                       <option value="#">Active</option>
                       <option value="#">Unactive</option>
                     </select>
                   </div>
                 </div>
-                <div class="form-group two"> 
+                <div class="form-group single"> 
                   <div class="form-item">
-                    <div class="form-label">New Password</div>
-                    <input class="border-gray radius medium" type="password" placeholder="Enter password">
-                    <div class="form-message error">Password is required</div>
+                    <div class="form-label">Content <span>*</span></div>
+                    <div id="ckEditor"></div>
                   </div>
                 </div>
               </div>
               <div class="col-4">
                 <div class="form-group single">
                   <div class="form-item"> 
-                    <div class="form-label">Avatar</div>
+                    <div class="form-label">Poster</div>
                     <div class="upload-wrapper open-modal-upload" data-toggle="modal" data-target="#modalUpload" data-id="uploadAvatar" id="uploadAvatar">
                       <input type="hidden" name="path">
                       <div class="upload-placeholder flex flex-column items-center justify-center"><img class="upload-icon" src="./assets/icons/icon-photo-gray.svg" alt="">

@@ -1,0 +1,67 @@
+extends includes/layout/layout-authen.pug
+block pages 
+  include includes/pages/section-authen-intro.pug
+  include includes/pages/section-authen-breadcumb.pug
+  include includes/components/button.pug
+  include includes/components/modal-upload.pug
+
+  .page-dashboard
+    .section-lastest-blog 
+      .authen-table.custom-style-form 
+        .table-header.flex.items-center.justify-content-between 
+          .table-name Settings
+        
+        .table-main
+          include ./includes/components/message-box.pug
+          +MessageBox('error', 'Error message')
+          
+          h5.form-title General Info
+          .row 
+            .col-8
+              .form-group.single
+                .form-item
+                  .form-label Username #[span *]
+                  input(type="text" placeholder="Enter username").border-gray.radius.medium
+              .form-group.single
+                .form-item
+                  .form-label Email #[span *]
+                  input(type="text" placeholder="Enter email").border-gray.radius.medium
+
+            .col-4
+              .form-group.single
+                .form-item 
+                  .form-label Avatar
+                  .upload-wrapper.open-modal-upload(data-toggle="modal" data-target="#modalUpload" data-id="uploadAvatar")#uploadAvatar
+                    input(type="hidden" name="path")
+
+                    .upload-placeholder.flex.flex-column.items-center.justify-center
+                      img.upload-icon(src="./assets/icons/icon-photo-gray.svg", alt="")
+                      .upload-text Select Image
+
+                    .upload-image(style="display: none;")
+                      img(src="./assets/images/bg-banner-guest.jpeg", alt="")
+
+            .col-12 
+              h5.form-title Change Password
+              .form-group.single
+                .form-item
+                  .form-label Old Password #[span *]
+                  input(type="password" placeholder="Enter old password").border-gray.radius.medium
+              .form-group.single
+                .form-item
+                  .form-label New Password #[span *]
+                  input(type="password" placeholder="Enter new password").border-gray.radius.medium
+              .form-group.single
+                .form-item
+                  .form-label Repeat New Password #[span *]
+                  input(type="password" placeholder="Enter repeat new password").border-gray.radius.medium
+
+            .col-12
+              .line
+              .form-group.justify-content-end(style="margin-top: 25px;")
+                .form-item.ml-3
+                  +Button({ link: '#', title: 'Save', icon: './assets/icons/icon-save-white.svg', className: 'primary radius', isHover: true })
+
+
+
+        

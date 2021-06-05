@@ -537,3 +537,25 @@ section.section {
 .modal-open .modal {
 	@include scrollBarStyle;
 }
+
+.tooltip {
+	.tooltip-inner {
+		font-family: 'Mulish', sans-serif;
+	}
+}
+
+.ck-editor {
+	.ck-editor__top {
+		.ck-toolbar {
+			border-color: $border !important;
+			border-top-left-radius: 5px !important;
+			border-top-right-radius: 5px !important;
+		}
+	}
+	.ck-editor__editable {
+		min-height: 300px;
+		border-color: $border !important;
+		border-bottom-left-radius: 5px !important;
+		border-bottom-right-radius: 5px !important;
+	}
+}

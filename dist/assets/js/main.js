@@ -5,28 +5,40 @@ window.onload = () => {
   vanillaTilt.init()
   loader.init()
   modal.init()
+  bootstrap.init()
+  ckEditor.init()
+}
+
+const bootstrap = {
+  init: function () {
+    this.tooltip()
+  },
+  tooltip: function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  },
 }
 
 const modal = {
-  init: function() {
+  init: function () {
     this.modalDelete()
     this.modalUpload()
     this.modalPreview()
   },
-  modalDelete: function() {
+  modalDelete: function () {
     const btnOpenModal = document.querySelectorAll('.open-modal-delete')
     const modal = document.querySelector('#modalDelete')
     if (modal) {
-      const inputId = modal.querySelector('input[name="modalTargetId"]')
-      const inputName = modal.querySelector('input[name="modalTargetName"]')
+      const modalForm = modal.querySelector('.modal-delete-wrapper')
 
       btnOpenModal.forEach((item, index) => item.addEventListener('click', () => {
-        inputId.value = item.dataset.id
-        inputName.value = item.dataset.name
+        const id = item.dataset.id
+        const name = item.dataset.name
+        const action = item.dataset.action
+        modalForm.action = `index.php?controller=admin&action=${action}&currentName=${name}&currentId=${id}`
       }))
     }
   },
-  modalPreview: function() {
+  modalPreview: function () {
     const btnOpenModal = document.querySelectorAll('.open-modal-preview')
     const modal = document.querySelector('#modalPreview')
     if (modal) {
@@ -38,7 +50,7 @@ const modal = {
       }))
     }
   },
-  modalUpload: function() {
+  modalUpload: function () {
     const btnOpenModal = document.querySelectorAll('.open-modal-upload')
     const modal = document.querySelector('#modalUpload')
     if (modal) {
@@ -62,7 +74,7 @@ const modal = {
         if (target && fileChoose.value) {
           const placeholder = target.querySelector('.upload-placeholder')
           const uploadImage = target.querySelector('.upload-image')
-          const input = target.querySelector('input[name="path"]')
+          const input = target.querySelector('input.upload-path')
 
           placeholder.style.display = 'none'
           uploadImage.style.display = 'block'
@@ -75,23 +87,23 @@ const modal = {
 }
 
 const loader = {
-  init: function() {
+  init: function () {
     this.loading()
   },
-  loading: function() {
+  loading: function () {
     const loader = document.querySelector('.loader')
     if (loader) loader.classList.add('loaded')
   },
 }
 
 const header = {
-  init: function() {
+  init: function () {
     this.expandSearch()
     this.expandMenuMobile()
     this.expandCategoryMobile()
     this.expandMenuAuthen()
   },
-  expandSearch: function() {
+  expandSearch: function () {
     const searchBtnIcon = document.querySelector('.section-header .header-item.search svg')
     const searchMain = document.querySelector('.section-header .header-item.search .search-input')
 
@@ -104,7 +116,7 @@ const header = {
       })
     }
   },
-  expandMenuMobile: function() {
+  expandMenuMobile: function () {
     const menuBtn = document.querySelector('.section-header .header-item.btn-menu-mobile')
     const menuMain = document.querySelector('.menu-mobile-wrapper')
     const body = document.querySelector('body')
@@ -128,7 +140,7 @@ const header = {
       })
     }
   },
-  expandCategoryMobile: function() {
+  expandCategoryMobile: function () {
     const categoryBtn = document.querySelector('.category-filter-mobile')
     const categoryMain = document.querySelector('.category-sidebar')
     const body = document.querySelector('body')
@@ -147,7 +159,7 @@ const header = {
       })
     }
   },
-  expandMenuAuthen: function() {
+  expandMenuAuthen: function () {
     const menuHeader = document.querySelector('.header-authen')
     const menuBtn = document.querySelector('.header-authen .header-bars')
     const menuMain = document.querySelector('.authen-sidebar')
@@ -222,10 +234,10 @@ const tabEvent = {
 };
 
 const vanillaTilt = {
-  init: function() {
+  init: function () {
     this.config()
   },
-  config: function() {
+  config: function () {
     const options = {
       max: 5,
     }
@@ -234,4 +246,24 @@ const vanillaTilt = {
       VanillaTilt.init(allTilt, options)
     }
   }
+}
+
+const ckEditor = {
+  init: function () {
+    this.config()
+  },
+  config: function () {
+    const main = document.querySelector('#ckEditor')
+    if (main) {
+      ClassicEditor
+        .create(main, {
+          ckfinder: {
+            uploadUrl: '/controllers/ckeditor-controller.php'
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  },
 }

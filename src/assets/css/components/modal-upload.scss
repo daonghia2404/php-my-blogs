@@ -11,6 +11,7 @@
     }
     .list-upload {
       border-right: 1px solid $border-light;
+      height: 100%;
       .upload-item {
         flex: 0 0 140px;
         max-width: 140px;
@@ -19,7 +20,7 @@
         overflow: hidden;
         @include centerImage;
         margin: 0 10px 10px 0;
-        border: 2px solid transparent;
+        border: 2px solid $border;
         transition: 0.3s ease;
         cursor: pointer;
         position: relative;

@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gulp Template</title>
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -87,7 +87,7 @@
           </div>
         </div>
         <div class="section-item">
-                    <button class="button-component flex items-center justify-center white radius hover-effect">
+                    <button class="button-component flex items-center justify-center white radius  hover-effect">
                       <div class="button-hover"> 
                         <div class="button-overlay-dark"> </div>
                         <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-settings-green.svg" alt=""></div>
@@ -147,7 +147,7 @@
               <div class="line"> </div>
               <div class="modal-btn-group flex justify-end">
                 <div class="group-item" data-dismiss="modal">
-                                  <button class="button-component flex items-center justify-center gray-light radius medium hover-effect">
+                                  <button class="button-component flex items-center justify-center gray-light radius medium  hover-effect">
                                     <div class="button-hover"> 
                                       <div class="button-overlay-dark"> </div>
                                       <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-cancel-gray.svg" alt=""></div>
@@ -155,7 +155,7 @@
                                   </button>
                 </div>
                 <div class="group-item" data-dismiss="modal">
-                                  <button class="button-component flex items-center justify-center primary radius medium submit-modal-upload hover-effect">
+                                  <button class="button-component flex items-center justify-center primary radius medium submit-modal-upload  hover-effect">
                                     <div class="button-hover"> 
                                       <div class="button-overlay-dark"> </div>
                                       <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-upload-white.svg" alt=""></div>
@@ -172,7 +172,7 @@
       <div class="section-lastest-blog"> 
         <div class="authen-table custom-style-form"> 
           <div class="table-header flex items-center justify-content-between"> 
-            <div class="table-name">Edit User </div>
+            <div class="table-name">Edit Blog </div>
           </div>
           <div class="table-main">
                         <div class="form-message-box flex items-start error"><img src="./assets/icons/icon-error-red.svg" alt="">Error message
@@ -181,44 +181,54 @@
               <div class="col-8">
                 <div class="form-group two"> 
                   <div class="form-item">
-                    <div class="form-label">Username <span>*</span></div>
-                    <input class="border-gray radius medium" type="text" placeholder="Enter username">
+                    <div class="form-label">Title <span>*</span></div>
+                    <input class="border-gray radius medium" type="text" placeholder="Enter title">
                   </div>
                   <div class="form-item">
-                    <div class="form-label">Email <span>*</span></div>
-                    <input class="border-gray radius medium" type="text" placeholder="Enter email">
+                    <div class="form-label">Author <span>*</span></div>
+                    <select class="border-gray radius medium">
+                      <option value="#">Author 1</option>
+                      <option value="#">Author 2</option>
+                      <option value="#">Author 3</option>
+                      <option value="#">Author 4</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group single"> 
+                  <div class="form-item">
+                    <div class="form-label">Description <span>*</span></div>
+                    <textarea class="border-gray radius" placeholder="Enter description"></textarea>
                   </div>
                 </div>
                 <div class="form-group two"> 
                   <div class="form-item">
-                    <div class="form-label">Role <span>*</span></div>
+                    <div class="form-label">Category <span>*</span></div>
                     <select class="border-gray radius medium">
-                      <option value="#">SUPER ADMIN</option>
-                      <option value="#">ADMIN</option>
-                      <option value="#">EDITOR</option>
-                      <option value="#">VIEWER</option>
+                      <option value="#">Category 1</option>
+                      <option value="#">Category 2</option>
+                      <option value="#">Category 3</option>
+                      <option value="#">Category 4</option>
                     </select>
                   </div>
                   <div class="form-item">
-                    <div class="form-label">Email <span>*</span></div>
+                    <div class="form-label">Status <span>*</span></div>
                     <select class="border-gray radius medium">
                       <option value="#">Active</option>
                       <option value="#">Unactive</option>
                     </select>
                   </div>
                 </div>
-                <div class="form-group two"> 
+                <div class="form-group single"> 
                   <div class="form-item">
-                    <div class="form-label">New Password</div>
-                    <input class="border-gray radius medium" type="password" placeholder="Enter password">
-                    <div class="form-message error">Password is required</div>
+                    <div class="form-label">Content <span>*</span></div>
+                    <div id="ckEditor"></div>
                   </div>
                 </div>
               </div>
               <div class="col-4">
                 <div class="form-group single">
                   <div class="form-item"> 
-                    <div class="form-label">Avatar</div>
+                    <div class="form-label">Poster</div>
                     <div class="upload-wrapper open-modal-upload" data-toggle="modal" data-target="#modalUpload" data-id="uploadAvatar" id="uploadAvatar">
                       <input type="hidden" name="path">
                       <div class="upload-placeholder flex flex-column items-center justify-center"><img class="upload-icon" src="./assets/icons/icon-photo-gray.svg" alt="">
@@ -233,7 +243,7 @@
                 <div class="line"></div>
                 <div class="form-group justify-content-end" style="margin-top: 25px;">
                   <div class="form-item"> 
-                                    <button class="button-component flex items-center justify-center gray-light radius hover-effect">
+                                    <button class="button-component flex items-center justify-center gray-light radius  hover-effect">
                                       <div class="button-hover"> 
                                         <div class="button-overlay-dark"> </div>
                                         <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-cancel-gray.svg" alt=""></div>
@@ -241,7 +251,7 @@
                                     </button>
                   </div>
                   <div class="form-item ml-3">
-                                    <button class="button-component flex items-center justify-center primary radius hover-effect">
+                                    <button class="button-component flex items-center justify-center primary radius  hover-effect">
                                       <div class="button-hover"> 
                                         <div class="button-overlay-dark"> </div>
                                         <div class="button-overlay-light flex items-center justify-center"> <img class="button-icon-hover" src="./assets/icons/icon-save-white.svg" alt=""></div>

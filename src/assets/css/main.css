@@ -851,6 +851,20 @@ section.section {
   .modal-open .modal::-webkit-scrollbar-thumb:hover {
     background: #59815b; }
 
+.tooltip .tooltip-inner {
+  font-family: 'Mulish', sans-serif; }
+
+.ck-editor .ck-editor__top .ck-toolbar {
+  border-color: #e1e1e1 !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important; }
+
+.ck-editor .ck-editor__editable {
+  min-height: 300px;
+  border-color: #e1e1e1 !important;
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px !important; }
+
 .oswald-font {
   font-family: 'Oswald', sans-serif !important; }
 
@@ -1568,11 +1582,15 @@ section.banner {
           height: 40px;
           border-radius: 4px;
           overflow: hidden;
+          cursor: pointer;
           display: flex;
           align-items: center;
           justify-content: center; }
           .authen-table .table-body table td .table-image.avatar {
             border-radius: 50%; }
+          .authen-table .table-body table td .table-image img {
+            user-select: none;
+            pointer-events: none; }
           .authen-table .table-body table td .table-image img {
             width: 100%;
             height: 100%;
@@ -1758,7 +1776,8 @@ section.banner {
   margin-bottom: 25px; }
 
 #modalUpload .modal-upload-wrapper .list-upload {
-  border-right: 1px solid rgba(231, 231, 231, 0.45); }
+  border-right: 1px solid rgba(231, 231, 231, 0.45);
+  height: 100%; }
   #modalUpload .modal-upload-wrapper .list-upload .upload-item {
     flex: 0 0 140px;
     max-width: 140px;
@@ -1769,7 +1788,7 @@ section.banner {
     align-items: center;
     justify-content: center;
     margin: 0 10px 10px 0;
-    border: 2px solid transparent;
+    border: 2px solid #e1e1e1;
     transition: 0.3s ease;
     cursor: pointer;
     position: relative; }
