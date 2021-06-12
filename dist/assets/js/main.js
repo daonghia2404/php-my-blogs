@@ -265,3 +265,8 @@ const ckEditor = {
     }
   },
 }
+
+function formatMoment(type, datetime) {
+  if (type === 'from-now') return moment(datetime, "YYYY-MM-DD HH:mm:ss").fromNow()
+  if (type === 'format') return moment(datetime, "YYYY-MM-DD HH:mm:ss").format("MMM Do YYYY HH:mm:ss")
+}

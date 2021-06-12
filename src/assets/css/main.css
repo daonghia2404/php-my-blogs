@@ -866,6 +866,9 @@ section.section {
   border: 1px solid #e1e1e1;
   border-radius: 5px; }
 
+.js-moment {
+  text-transform: capitalize; }
+
 .oswald-font {
   font-family: 'Oswald', sans-serif !important; }
 

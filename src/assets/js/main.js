@@ -6,6 +6,7 @@ window.onload = () => {
   loader.init()
   modal.init()
   bootstrap.init()
+  jsMoment.init()
   ckEditor.init()
 }
 
@@ -264,4 +265,22 @@ const ckEditor = {
       });
     }
   },
+}
+
+const jsMoment = {
+  init: function() {
+    this.config()
+  },
+  formatMoment: function(type, datetime) {
+    if (type === 'from-now') return moment(datetime, "YYYY-MM-DD HH:mm:ss").fromNow()
+    if (type === 'format') return moment(datetime, "YYYY-MM-DD HH:mm:ss").format("MMM DD YYYY - HH:mm:ss")
+  },
+  config: function() {
+    const jsMoment = document.querySelectorAll('.js-moment');
+    jsMoment.forEach((item) => {
+      const type = item.dataset.format
+      const datetime = item.dataset.datetime
+      item.innerHTML = this.formatMoment(type, datetime)
+    })
+  }
 }
