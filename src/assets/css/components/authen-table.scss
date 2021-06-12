@@ -3,6 +3,7 @@
   border-radius: 10px;
   @include box-shadow;
   background: $white;
+  height: 100%;
   .table-header {
     .table-name {
       font-family: 'Mulish', sans-serif;
@@ -37,6 +38,7 @@
     margin-top: 15px;
     overflow-x: auto;
     overflow-y: unset;
+    padding-bottom: 60px;
     @include scrollBarStyle;
     table {
       width: 100%;

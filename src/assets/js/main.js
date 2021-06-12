@@ -55,7 +55,8 @@ const modal = {
     const modal = document.querySelector('#modalUpload')
     if (modal) {
       let targetId = ''
-      const fileChoose = modal.querySelector('input[name="fileChoose"]')
+      const fileSrc = modal.querySelector('input[name="fileSrc"]')
+      const fileId = modal.querySelector('input[name="fileId"]')
       const submit = modal.querySelector('.submit-modal-upload')
 
       btnOpenModal.forEach((item, index) => item.addEventListener('click', () => {
@@ -66,20 +67,21 @@ const modal = {
       listUpload.forEach((item, index) => item.addEventListener('click', () => {
         listUpload.forEach(i => i.classList.remove('active'))
         item.classList.add('active')
-        fileChoose.value = item.querySelector('img').src
+        fileSrc.value = item.querySelector('img').src
+        fileId.value = item.querySelector('img').dataset.id
       }))
 
       submit.addEventListener('click', () => {
         const target = document.querySelector(`#${targetId}`)
-        if (target && fileChoose.value) {
+        if (target && fileSrc.value && fileId.value) {
           const placeholder = target.querySelector('.upload-placeholder')
           const uploadImage = target.querySelector('.upload-image')
           const input = target.querySelector('input.upload-path')
 
           placeholder.style.display = 'none'
           uploadImage.style.display = 'block'
-          uploadImage.querySelector('img').src = fileChoose.value
-          input.value = fileChoose.value
+          uploadImage.querySelector('img').src = fileSrc.value
+          input.value = fileId.value
         }
       })
     }

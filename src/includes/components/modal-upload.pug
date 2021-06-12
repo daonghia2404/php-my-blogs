@@ -6,11 +6,12 @@
           .modal-title Upload
           .row 
             .col-8 
-              input(type="hidden" name="fileChoose")
+              input(type="hidden" name="fileSrc")
+              input(type="hidden" name="fileId")
               .list-upload.flex.flex-wrap 
                 each item in [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8]
                   .upload-item(data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom")
-                    img(src=`./assets/images/image-blog-${item}.jpeg`, alt="")
+                    img(src=`./assets/images/image-blog-${item}.jpeg`, alt="" data-id="2")
               .table-no-data.flex.items-center.justify-center.flex-column
                 .no-data-icon.flex.items-center.justify-center
                   img(src="./assets/icons/icon-no-data-green.svg", alt="")

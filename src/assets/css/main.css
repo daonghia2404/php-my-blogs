@@ -619,7 +619,12 @@ section.section {
     .custom-style-form .form-message.success {
       color: #2ecc71; }
 
-.custom-style-content h1, .custom-style-content h2, .custom-style-content h3, .custom-style-content h4, .custom-style-content h5, .custom-style-content h6 {
+.custom-style-content h1,
+.custom-style-content h2,
+.custom-style-content h3,
+.custom-style-content h4,
+.custom-style-content h5,
+.custom-style-content h6 {
   color: #1e1e1e;
   margin: 0 0 25px 0;
   text-transform: uppercase;
@@ -640,7 +645,8 @@ section.section {
 .custom-style-content h5 {
   font-size: 20px; }
 
-.custom-style-content p, .custom-style-content li {
+.custom-style-content p,
+.custom-style-content li {
   font-size: 16px;
   line-height: 1.5;
   color: #878787;
@@ -656,7 +662,8 @@ section.section {
     margin-bottom: 5px;
     font-weight: 400; }
 
-.custom-style-content a, .custom-style-content strong {
+.custom-style-content a,
+.custom-style-content strong {
   color: #59815b;
   font-family: 'Mulish', sans-serif; }
 
@@ -864,6 +871,32 @@ section.section {
   border-color: #e1e1e1 !important;
   border-bottom-left-radius: 5px !important;
   border-bottom-right-radius: 5px !important; }
+
+.ck-editor .ck-content h1,
+.ck-editor .ck-content h2,
+.ck-editor .ck-content h3,
+.ck-editor .ck-content h4,
+.ck-editor .ck-content h5,
+.ck-editor .ck-content h6,
+.ck-editor .ck-content p,
+.ck-editor .ck-content a,
+.ck-editor .ck-content ul,
+.ck-editor .ck-content ol,
+.ck-editor .ck-content li {
+  font-size: inherit; }
+
+.ck-editor .ck-content * {
+  font-family: 'Mulish', sans-serif; }
+
+.ck-editor .ck-content p {
+  margin-bottom: 0; }
+
+.ck-editor .ck-content ul,
+.ck-editor .ck-content ol {
+  padding-left: 20px; }
+
+.ck-editor .ck-content ul {
+  list-style: disc; }
 
 .oswald-font {
   font-family: 'Oswald', sans-serif !important; }
@@ -1472,31 +1505,34 @@ section.banner {
       color: #e1e1e1; }
     .authen-sidebar .sidebar-lists .lists-page {
       margin: 5px 0 25px; }
-      .authen-sidebar .sidebar-lists .lists-page .list-item a {
-        font-size: 14px;
-        color: #e1e1e1;
-        font-family: 'Mulish', sans-serif;
-        display: block;
-        border-radius: 4px;
-        transition: 0.3s ease;
-        padding: 8px 8px; }
-        .authen-sidebar .sidebar-lists .lists-page .list-item a:hover, .authen-sidebar .sidebar-lists .lists-page .list-item a.active {
-          background: rgba(255, 255, 255, 0.2);
-          color: #fff; }
-          .authen-sidebar .sidebar-lists .lists-page .list-item a:hover svg, .authen-sidebar .sidebar-lists .lists-page .list-item a.active svg {
-            fill: #fff; }
-        .authen-sidebar .sidebar-lists .lists-page .list-item a svg {
-          width: 15px;
-          height: 15px;
-          margin-right: 15px;
-          fill: #e1e1e1;
-          transition: 0.3s ease; }
+      .authen-sidebar .sidebar-lists .lists-page .list-item {
+        margin-bottom: 5px; }
+        .authen-sidebar .sidebar-lists .lists-page .list-item a {
+          font-size: 14px;
+          color: #e1e1e1;
+          font-family: 'Mulish', sans-serif;
+          display: block;
+          border-radius: 4px;
+          transition: 0.3s ease;
+          padding: 8px 8px; }
+          .authen-sidebar .sidebar-lists .lists-page .list-item a:hover, .authen-sidebar .sidebar-lists .lists-page .list-item a.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff; }
+            .authen-sidebar .sidebar-lists .lists-page .list-item a:hover svg, .authen-sidebar .sidebar-lists .lists-page .list-item a.active svg {
+              fill: #fff; }
+          .authen-sidebar .sidebar-lists .lists-page .list-item a svg {
+            width: 15px;
+            height: 15px;
+            margin-right: 15px;
+            fill: #e1e1e1;
+            transition: 0.3s ease; }
 
 .authen-table {
   padding: 12px 24px;
   border-radius: 10px;
   box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  background: #fff; }
+  background: #fff;
+  height: 100%; }
   .authen-table .table-header .table-name {
     font-family: 'Mulish', sans-serif;
     font-size: 16px;
@@ -1520,6 +1556,7 @@ section.banner {
     margin-top: 15px;
     overflow-x: auto;
     overflow-y: unset;
+    padding-bottom: 60px;
     /* Track */
     /* Handle */
     /* Handle on hover */ }
