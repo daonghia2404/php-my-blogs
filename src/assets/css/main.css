@@ -861,42 +861,10 @@ section.section {
 .tooltip .tooltip-inner {
   font-family: 'Mulish', sans-serif; }
 
-.ck-editor .ck-editor__top .ck-toolbar {
-  border-color: #e1e1e1 !important;
-  border-top-left-radius: 5px !important;
-  border-top-right-radius: 5px !important; }
-
-.ck-editor .ck-editor__editable {
+#cke_ckEditor {
   min-height: 300px;
-  border-color: #e1e1e1 !important;
-  border-bottom-left-radius: 5px !important;
-  border-bottom-right-radius: 5px !important; }
-
-.ck-editor .ck-content h1,
-.ck-editor .ck-content h2,
-.ck-editor .ck-content h3,
-.ck-editor .ck-content h4,
-.ck-editor .ck-content h5,
-.ck-editor .ck-content h6,
-.ck-editor .ck-content p,
-.ck-editor .ck-content a,
-.ck-editor .ck-content ul,
-.ck-editor .ck-content ol,
-.ck-editor .ck-content li {
-  font-size: inherit; }
-
-.ck-editor .ck-content * {
-  font-family: 'Mulish', sans-serif; }
-
-.ck-editor .ck-content p {
-  margin-bottom: 0; }
-
-.ck-editor .ck-content ul,
-.ck-editor .ck-content ol {
-  padding-left: 20px; }
-
-.ck-editor .ck-content ul {
-  list-style: disc; }
+  border: 1px solid #e1e1e1;
+  border-radius: 5px; }
 
 .oswald-font {
   font-family: 'Oswald', sans-serif !important; }
@@ -1887,7 +1855,7 @@ header.header-authen {
   position: fixed;
   background: #fff;
   width: 100%;
-  z-index: 9;
+  z-index: 10;
   transition: 0.3s ease;
   top: 0;
   box-shadow: 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }

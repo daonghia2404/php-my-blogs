@@ -257,15 +257,11 @@ const ckEditor = {
   config: function () {
     const main = document.querySelector('#ckEditor')
     if (main) {
-      ClassicEditor
-        .create(main, {
-          ckfinder: {
-            uploadUrl: '/controllers/ckeditor-controller.php'
-          }
-        })
-        .catch(error => {
-          console.error(error);
-        });
+      CKEDITOR.replace(main, {
+        filebrowserUploadUrl: 'index.php?controller=ckeditor&action=upload',
+        filebrowserUploadMethod: 'form',
+        height: 400,
+      });
     }
   },
 }

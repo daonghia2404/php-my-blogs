@@ -639,53 +639,8 @@ section.section {
   }
 }
 
-.ck-editor {
-  .ck-editor__top {
-    .ck-toolbar {
-      border-color: $border !important;
-      border-top-left-radius: 5px !important;
-      border-top-right-radius: 5px !important;
-    }
-  }
-
-  .ck-editor__editable {
-    min-height: 300px;
-    border-color: $border !important;
-    border-bottom-left-radius: 5px !important;
-    border-bottom-right-radius: 5px !important;
-  }
-
-  .ck-content {
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    ul,
-    ol,
-    li {
-      font-size: inherit;
-    }
-
-    * {
-      font-family: 'Mulish', sans-serif;
-    }
-
-    p {
-      margin-bottom: 0;
-    }
-
-    ul,
-    ol {
-      padding-left: 20px;
-    }
-
-    ul {
-      list-style: disc;
-    }
-  }
+#cke_ckEditor {
+  min-height: 300px;
+  border: 1px solid $border;
+  border-radius: 5px;
 }
